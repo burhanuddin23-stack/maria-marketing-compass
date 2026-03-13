@@ -1,122 +1,329 @@
 {
-  "updatedAt": "2026-03-13T16:20:00+01:00",
+  "updatedAt": "2026-03-13T17:21:05+01:00",
   "hiringOpportunities": [
     {
       "id": "betc-paris",
       "name": "BETC",
       "city": "Paris",
-      "focus": ["Creative", "Branding", "Social"],
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
       "status": "Official join route",
       "internshipFit": "Good for internships and junior creative profiles.",
-      "summary": "BETC runs a dedicated careers hub for its Paris-based creative network and is a strong target for brand, content, and strategy internships.",
+      "summary": "Paris-based creative network with a stable official join route.",
       "hiringUrl": "https://betc.teamtailor.com/#jobs",
       "siteUrl": "https://www.betc.com/",
       "sourceUrl": "https://betc.com/en/contact",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "rosa-paris",
       "name": "ROSA PARIS",
       "city": "Paris",
-      "focus": ["Creative", "Social", "Branding"],
+      "focus": [
+        "Creative",
+        "Social",
+        "Branding"
+      ],
       "status": "Direct contact route",
-      "internshipFit": "Best for direct outreach and spontaneous internship applications.",
-      "summary": "ROSA PARIS currently surfaces a stable official contact route more clearly than a public careers board, so direct outreach is the safer path.",
+      "internshipFit": "Good for spontaneous internship outreach.",
+      "summary": "Stable official contact route rather than a public jobs board.",
       "hiringUrl": "https://rosaparis.com/en/contact",
       "siteUrl": "https://www.rosaparis.com/",
       "sourceUrl": "https://rosaparis.com/en/contact",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "wellcom-paris",
       "name": "Wellcom",
       "city": "Paris",
-      "focus": ["PR", "Digital", "Social"],
+      "focus": [
+        "PR",
+        "Digital",
+        "Social"
+      ],
       "status": "Official contact route",
-      "internshipFit": "Directly relevant for PR, influence, and communications internships.",
-      "summary": "Wellcom currently exposes a stable official contact page, which is the more reliable application route for outreach in PR, branding, and digital influence.",
+      "internshipFit": "Strong for PR and communications internships.",
+      "summary": "Reliable official contact path for outreach.",
       "hiringUrl": "https://www.wellcom.fr/contact/",
       "siteUrl": "https://wellcom.fr/",
       "sourceUrl": "https://www.wellcom.fr/contact/",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "ogilvy-france",
       "name": "Ogilvy Paris",
       "city": "Paris",
-      "focus": ["Creative", "Digital", "Branding"],
+      "focus": [
+        "Creative",
+        "Digital",
+        "Branding"
+      ],
       "status": "Official careers section",
-      "internshipFit": "Good for broad network applications and early-career outreach.",
-      "summary": "Ogilvy France highlights careers directly on its official France pages, making it a practical target for account, creative, and digital applications.",
-      "hiringUrl": "https://www.ogilvy.com/fr/about",
+      "internshipFit": "Broad early-career option across teams.",
+      "summary": "France pages highlight careers and firm profile.",
+      "hiringUrl": "https://www.ogilvy.com/fr/careers",
       "siteUrl": "https://www.ogilvy.com/fr/",
-      "sourceUrl": "https://www.ogilvy.com/fr/about",
-      "addedOn": "2026-03-13"
+      "sourceUrl": "https://www.ogilvy.com/fr/careers",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "vml-france",
       "name": "VML France",
       "city": "Paris",
-      "focus": ["Digital", "Creative", "Social"],
+      "focus": [
+        "Digital",
+        "Creative",
+        "Social"
+      ],
       "status": "Global careers route",
-      "internshipFit": "Useful for digital marketing, CRM, and social applications.",
-      "summary": "VML France is part of a larger network, but its careers route is active and worth checking for Paris-based junior and internship-friendly listings.",
+      "internshipFit": "Good for CRM, social, and digital roles.",
+      "summary": "Stable central careers flow.",
       "hiringUrl": "https://www.vml.com/careers",
       "siteUrl": "https://www.vml.com/france",
       "sourceUrl": "https://www.vml.com/careers",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "havas-paris",
       "name": "Havas Paris",
       "city": "Paris",
-      "focus": ["PR", "Branding", "Social"],
+      "focus": [
+        "PR",
+        "Branding",
+        "Social"
+      ],
       "status": "HR contact route",
-      "internshipFit": "Best for direct outreach with a tailored CV and portfolio.",
-      "summary": "Havas Paris exposes a direct HR contact and jobs reference on its official pages, which is the safer route when specific internship posts are not listed.",
-      "hiringUrl": "https://havasparis.com/contact-rh-footer/",
+      "internshipFit": "Best for direct outreach with a tailored CV.",
+      "summary": "Official HR contact page is the safer route.",
+      "hiringUrl": "https://havasparis.com/envie-de-venir-travailler-chez-nous",
       "siteUrl": "https://www.havasparis.com/",
-      "sourceUrl": "https://havasparis.com/contact-rh-footer/",
-      "addedOn": "2026-03-13"
+      "sourceUrl": "https://havasparis.com/envie-de-venir-travailler-chez-nous",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "marcel",
+      "name": "Marcel",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "status": "Official contact route",
+      "internshipFit": "Strong target for creative and account roles.",
+      "summary": "Publicis agency with a stable official contact route.",
+      "hiringUrl": "https://www.marcelww.com/contact",
+      "siteUrl": "https://www.marcelww.com/",
+      "sourceUrl": "https://www.marcelww.com/contact",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "herezie",
+      "name": "Herezie",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "status": "Official contact route",
+      "internshipFit": "Good for brand creative outreach.",
+      "summary": "Paris agency with a visible official contact page.",
+      "hiringUrl": "https://herezie.com/en/contact",
+      "siteUrl": "https://herezie.com/",
+      "sourceUrl": "https://herezie.com/en/contact",
+      "addedOn": "2026-03-12",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "tbwa-paris",
+      "name": "TBWA\\Paris",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "status": "Official contact route",
+      "internshipFit": "Useful for large-network internship outreach.",
+      "summary": "Well-known network agency with official contact access.",
+      "hiringUrl": "https://www.tbwa-paris.com/contact",
+      "siteUrl": "https://www.tbwa-paris.com/",
+      "sourceUrl": "https://www.tbwa-paris.com/contact",
+      "addedOn": "2026-03-12",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "saatchi-france",
+      "name": "Saatchi & Saatchi France",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "status": "Official contact route",
+      "internshipFit": "Good for brand strategy and account support roles.",
+      "summary": "Publicis network agency with official France contact page.",
+      "hiringUrl": "https://saatchi.com/fr-fr/network/contact-us/",
+      "siteUrl": "https://www.saatchi.fr/",
+      "sourceUrl": "https://saatchi.com/fr-fr/network/contact-us/",
+      "addedOn": "2026-03-12",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "three52",
       "name": "Three52",
       "city": "Luxembourg",
-      "focus": ["Digital", "Creative", "Branding"],
+      "focus": [
+        "Digital",
+        "Creative",
+        "Branding"
+      ],
       "status": "Agency hiring page live",
-      "internshipFit": "Solid target for digital design and web-oriented internships.",
-      "summary": "Three52 maintains an active careers page and is one of the clearest digital agency routes in Luxembourg for internship-style outreach.",
+      "internshipFit": "Solid for digital and web-oriented internships.",
+      "summary": "One of the clearest digital agency careers routes in Luxembourg.",
       "hiringUrl": "https://three52agency.com/careers/",
       "siteUrl": "https://three52agency.com/",
       "sourceUrl": "https://three52agency.com/careers/",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "point-a",
       "name": "Point A",
       "city": "Luxembourg",
-      "focus": ["Branding", "Digital", "Creative"],
+      "focus": [
+        "Branding",
+        "Digital",
+        "Creative"
+      ],
       "status": "Official contact route",
-      "internshipFit": "Strong option for unsolicited internship applications.",
-      "summary": "Point A explicitly invites candidates to email their CV through its official contact page, which is a stable route for proactive applications.",
+      "internshipFit": "Strong option for proactive applications.",
+      "summary": "Official contact page invites CV outreach.",
       "hiringUrl": "https://pointamarketing.com/contact-us",
       "siteUrl": "https://pointamarketing.com/",
-      "sourceUrl": "https://pointamarketing.com/contact-us",
-      "addedOn": "2026-03-13"
+      "sourceUrl": "https://pointamarketing.com/",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     },
     {
       "id": "vous",
       "name": "VOUS Agency",
       "city": "Luxembourg",
-      "focus": ["Creative", "Digital", "Branding"],
+      "focus": [
+        "Creative",
+        "Digital",
+        "Branding"
+      ],
       "status": "Stage roles visible",
-      "internshipFit": "Very relevant when looking for internship placements.",
-      "summary": "VOUS shows stage-style opportunities and a jobs contact route on its official team page, making it one of the clearest Luxembourg targets.",
+      "internshipFit": "Very relevant for internship placements.",
+      "summary": "Official team page references stage-style opportunities.",
       "hiringUrl": "https://vous.lu/notre-equipe/",
       "siteUrl": "https://www.vous.lu/",
       "sourceUrl": "https://vous.lu/notre-equipe/",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "concept-factory",
+      "name": "Concept Factory",
+      "city": "Luxembourg",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "status": "Official jobs page",
+      "internshipFit": "Worth checking for creative and digital internships.",
+      "summary": "Official jobs page is visible and stable.",
+      "hiringUrl": "https://www.conceptfactory.lu/jobs/",
+      "siteUrl": "https://www.conceptfactory.lu/",
+      "sourceUrl": "https://www.conceptfactory.lu/jobs/",
+      "addedOn": "2026-03-12",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "knewledge",
+      "name": "Knewledge",
+      "city": "Luxembourg",
+      "focus": [
+        "Digital",
+        "PR",
+        "Social"
+      ],
+      "status": "Official join-us page",
+      "internshipFit": "Good for integrated communication internships.",
+      "summary": "Official join-us page exists on the agency site.",
+      "hiringUrl": "https://www.knewledge.com/lagence/rejoindre-lequipe/",
+      "siteUrl": "https://www.knewledge.com/",
+      "sourceUrl": "https://www.knewledge.com/lagence/rejoindre-lequipe/",
+      "addedOn": "2026-03-12",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "bbdo-paris",
+      "name": "BBDO Paris",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "status": "Official join-us route",
+      "internshipFit": "Good for creative and strategic junior applications.",
+      "summary": "Official agency page exposes a direct join-us flow.",
+      "hiringUrl": "https://www.bbdo.fr/agence/",
+      "siteUrl": "https://www.bbdo.fr/",
+      "sourceUrl": "https://www.bbdo.fr/agence/",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "publicis-conseil",
+      "name": "Publicis Conseil",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "status": "Official careers route",
+      "internshipFit": "Strong option for large-agency internships and junior roles.",
+      "summary": "Publicis France careers page includes Publicis Conseil applications.",
+      "hiringUrl": "https://france.publicisgroupe.com/carrieres/publicis-conseil/",
+      "siteUrl": "https://www.publicisconseil.fr/fr/",
+      "sourceUrl": "https://france.publicisgroupe.com/carrieres/publicis-conseil/",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "binsfeld",
+      "name": "Binsfeld",
+      "city": "Luxembourg",
+      "focus": [
+        "Branding",
+        "Creative",
+        "Digital"
+      ],
+      "status": "Official contact route",
+      "internshipFit": "Relevant for proactive internship outreach in Luxembourg.",
+      "summary": "Independent Luxembourg agency with a clear official contact page.",
+      "hiringUrl": "https://binsfeld.lu/contact/",
+      "siteUrl": "https://binsfeld.lu/",
+      "sourceUrl": "https://binsfeld.lu/contact/",
+      "addedOn": "2026-03-13",
+      "updatedAt": "2026-03-13"
     }
   ],
   "agencyDirectory": [
@@ -124,96 +331,132 @@
       "id": "publicis-luxe",
       "name": "Publicis Luxe",
       "city": "Paris",
-      "focus": ["Branding", "Creative", "Luxury"],
-      "summary": "Luxury-focused creative agency inside the Publicis group with brand, digital, and campaign work.",
+      "focus": [
+        "Branding",
+        "Creative",
+        "Luxury"
+      ],
+      "summary": "Luxury-focused creative agency inside the Publicis group.",
       "siteUrl": "https://www.publicisluxe.com/",
       "sourceUrl": "https://www.publicisluxe.com/",
       "hiringState": "Check Publicis careers",
-      "addedOn": "2026-03-12"
+      "addedOn": "2026-03-11"
     },
     {
       "id": "buzzman",
       "name": "Buzzman",
       "city": "Paris",
-      "focus": ["Creative", "Social", "Branding"],
-      "summary": "Independent Paris agency known for campaigns blending brand storytelling and social-first thinking.",
+      "focus": [
+        "Creative",
+        "Social",
+        "Branding"
+      ],
+      "summary": "Independent Paris agency known for brand storytelling.",
       "siteUrl": "https://www.buzzman.eu/",
       "sourceUrl": "https://www.buzzman.eu/",
-      "hiringState": "Monitor for future openings",
-      "addedOn": "2026-03-12"
+      "hiringState": "Monitor agency updates",
+      "addedOn": "2026-03-11"
     },
     {
       "id": "heaven",
       "name": "heaven",
       "city": "Paris",
-      "focus": ["Digital", "Social", "Creative"],
-      "summary": "Digital-native agency in Paris with social, activation, influencer, and content work.",
+      "focus": [
+        "Digital",
+        "Social",
+        "Creative"
+      ],
+      "summary": "Digital-native Paris agency with social and content work.",
       "siteUrl": "https://heaven.fr/",
       "sourceUrl": "https://heaven.fr/recrutement/",
-      "hiringState": "General recruitment route available",
-      "addedOn": "2026-03-11"
-    },
-    {
-      "id": "wnp",
-      "name": "WNP",
-      "city": "Paris",
-      "focus": ["Creative", "Branding", "PR"],
-      "summary": "French independent communications agency spanning strategy, creative, and public relations work.",
-      "siteUrl": "https://wnp.com/",
-      "sourceUrl": "https://wnp.com/",
-      "hiringState": "Explore direct outreach",
-      "addedOn": "2026-03-10"
+      "hiringState": "General recruitment page available",
+      "addedOn": "2026-03-12"
     },
     {
       "id": "ddb-paris",
       "name": "DDB Paris",
       "city": "Paris",
-      "focus": ["Creative", "Branding", "Digital"],
-      "summary": "Large international network agency with Paris-based creative and brand communications work.",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "summary": "Large international network agency with Paris-based brand work.",
       "siteUrl": "https://www.ddb.fr/",
       "sourceUrl": "https://www.ddb.fr/",
       "hiringState": "Check network careers",
+      "addedOn": "2026-03-11"
+    },
+    {
+      "id": "fred-farid",
+      "name": "FRED & FARID Paris",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "summary": "International creative agency with Paris presence.",
+      "siteUrl": "https://www.fredfarid.com/",
+      "sourceUrl": "https://www.fredfarid.com/",
+      "hiringState": "Use official contact route",
+      "addedOn": "2026-03-10"
+    },
+    {
+      "id": "publicis-conseil",
+      "name": "Publicis Conseil",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "summary": "Flagship Publicis agency with broad brand and campaign work.",
+      "siteUrl": "https://www.publicisconseil.fr/",
+      "sourceUrl": "https://www.publicisconseil.fr/",
+      "hiringState": "Check Publicis careers",
       "addedOn": "2026-03-10"
     },
     {
       "id": "branderella",
       "name": "Branderella",
       "city": "Luxembourg",
-      "focus": ["Branding", "Creative", "Digital"],
-      "summary": "Luxembourg branding and design agency suited to students interested in identity systems and campaigns.",
+      "focus": [
+        "Branding",
+        "Creative",
+        "Digital"
+      ],
+      "summary": "Luxembourg branding and design agency.",
       "siteUrl": "https://branderella.lu/",
       "sourceUrl": "https://branderella.lu/",
       "hiringState": "Direct contact recommended",
-      "addedOn": "2026-03-13"
+      "addedOn": "2026-03-12"
     },
     {
       "id": "lola",
       "name": "lola",
       "city": "Luxembourg",
-      "focus": ["Creative", "Branding", "Social"],
-      "summary": "Well-known Luxembourg creative agency covering campaigns, strategy, and brand communications.",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "summary": "Well-known Luxembourg creative agency.",
       "siteUrl": "https://www.lola.lu/",
       "sourceUrl": "https://www.lola.lu/careers",
       "hiringState": "Watch careers page",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "knewledge",
-      "name": "Knewledge",
-      "city": "Luxembourg",
-      "focus": ["Digital", "PR", "Social"],
-      "summary": "Integrated communication agency with strong digital, content, and media capabilities in Luxembourg.",
-      "siteUrl": "https://www.knewledge.com/",
-      "sourceUrl": "https://www.knewledge.com/lagence/rejoindre-lequipe/",
-      "hiringState": "Official join-us page available",
-      "addedOn": "2026-03-11"
+      "addedOn": "2026-03-12"
     },
     {
       "id": "binsfeld",
       "name": "binsfeld",
       "city": "Luxembourg",
-      "focus": ["PR", "Branding", "Creative"],
-      "summary": "Long-standing Luxembourg communications agency with strategy, events, branding, and public relations work.",
+      "focus": [
+        "PR",
+        "Branding",
+        "Creative"
+      ],
+      "summary": "Long-standing Luxembourg communications agency.",
       "siteUrl": "https://www.binsfeld.lu/",
       "sourceUrl": "https://www.binsfeld.lu/",
       "hiringState": "Explore direct outreach",
@@ -223,45 +466,67 @@
       "id": "mikado",
       "name": "mi[k]do publicis",
       "city": "Luxembourg",
-      "focus": ["Creative", "Digital", "Branding"],
-      "summary": "Publicis-linked Luxembourg agency with capabilities in campaigns, design, and digital communications.",
+      "focus": [
+        "Creative",
+        "Digital",
+        "Branding"
+      ],
+      "summary": "Publicis-linked Luxembourg agency.",
       "siteUrl": "https://www.mikado.lu/",
       "sourceUrl": "https://www.mikado.lu/",
       "hiringState": "Check group opportunities",
-      "addedOn": "2026-03-09"
+      "addedOn": "2026-03-11"
     },
     {
-      "id": "ks",
-      "name": "KS Marketing",
+      "id": "apart",
+      "name": "Apart",
       "city": "Luxembourg",
-      "focus": ["Digital", "Social", "Branding"],
-      "summary": "Marketing-focused Luxembourg firm suited to performance, digital visibility, and content-oriented work.",
-      "siteUrl": "https://www.ks-marketing.lu/",
-      "sourceUrl": "https://www.ks-marketing.lu/",
-      "hiringState": "Direct outreach likely best",
-      "addedOn": "2026-03-09"
+      "focus": [
+        "Creative",
+        "Branding",
+        "Digital"
+      ],
+      "summary": "Luxembourg creative studio with branding and digital work.",
+      "siteUrl": "https://www.apart.lu/",
+      "sourceUrl": "https://www.apart.lu/",
+      "hiringState": "Monitor agency updates",
+      "addedOn": "2026-03-10"
+    },
+    {
+      "id": "clutch-creation",
+      "name": "Clutch Creation",
+      "city": "Luxembourg",
+      "focus": [
+        "Branding",
+        "Digital",
+        "Creative"
+      ],
+      "summary": "Luxembourg studio focused on brand and digital experiences.",
+      "siteUrl": "https://clutchcreation.com/",
+      "sourceUrl": "https://clutchcreation.com/",
+      "hiringState": "Use direct outreach",
+      "addedOn": "2026-03-10"
+    },
+    {
+      "id": "widemes-helmer",
+      "name": "WIDE / Widemes & Helmer",
+      "city": "Luxembourg",
+      "focus": [
+        "Digital",
+        "Branding",
+        "Social"
+      ],
+      "summary": "Integrated Luxembourg agency with digital and communication services.",
+      "siteUrl": "https://www.widemeshelmer.lu/",
+      "sourceUrl": "https://www.widemeshelmer.lu/",
+      "hiringState": "Monitor official website",
+      "addedOn": "2026-03-10"
     }
   ],
   "motivationalQuotes": [
     {
       "quote": "Success is the sum of small efforts, repeated day in and day out.",
       "author": "Robert Collier"
-    },
-    {
-      "quote": "It always seems impossible until it's done.",
-      "author": "Nelson Mandela"
-    },
-    {
-      "quote": "Do the best you can until you know better. Then when you know better, do better.",
-      "author": "Maya Angelou"
-    },
-    {
-      "quote": "Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying, I will try again tomorrow.",
-      "author": "Mary Anne Radmacher"
-    },
-    {
-      "quote": "Perseverance is not a long race; it is many short races one after another.",
-      "author": "Walter Elliot"
     }
   ]
 }

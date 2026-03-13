@@ -22,8 +22,7 @@
         <div class="hero-copy">
           <h1>Lets look for an internship shall we?</h1>
           <p class="intro">
-            A shorter, cleaner shortlist of marketing firms in Paris and Luxembourg with direct
-            links, live updates, and a simple way to compare more options at once.
+            Compact shortlist. Daily refresh. Keep track of what you have viewed and applied to.
           </p>
         </div>
 
@@ -38,8 +37,8 @@
               <dd id="directoryCount">0</dd>
             </div>
             <div class="stat-card">
-              <dt>Locations</dt>
-              <dd>2</dd>
+              <dt>Seen</dt>
+              <dd id="seenCount">0</dd>
             </div>
           </dl>
 
@@ -47,71 +46,82 @@
         </div>
       </header>
 
+      <section class="surface manual-panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Quick guide</p>
+            <h2>How to use this page.</h2>
+          </div>
+          <div class="section-actions">
+            <button id="refreshFeedButton" class="button secondary-button" type="button">
+              Refresh
+            </button>
+          </div>
+        </div>
+        <div class="manual-grid">
+          <p>1. Filter by city or focus.</p>
+          <p>2. Open the hiring or website links.</p>
+          <p>3. Tick firms as viewed or applied.</p>
+          <p>4. Check the Seen tab to review progress.</p>
+        </div>
+        <div class="sync-strip">
+          <span id="syncState">Loading live data...</span>
+          <span id="feedTimestamp">Feed timestamp pending</span>
+        </div>
+      </section>
+
+      <section class="surface updates-panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Daily updates</p>
+            <h2>Recent changes.</h2>
+          </div>
+        </div>
+
+        <div class="alert-controls">
+          <label class="toggle-card">
+            <input id="notificationsToggle" type="checkbox" />
+            <span>Browser notifications</span>
+          </label>
+          <label class="toggle-card">
+            <input id="watchParisToggle" type="checkbox" checked />
+            <span>Paris</span>
+          </label>
+          <label class="toggle-card">
+            <input id="watchLuxembourgToggle" type="checkbox" checked />
+            <span>Luxembourg</span>
+          </label>
+          <label class="toggle-card">
+            <input id="watchHiringToggle" type="checkbox" checked />
+            <span>Opportunities</span>
+          </label>
+          <label class="toggle-card">
+            <input id="watchDirectoryToggle" type="checkbox" checked />
+            <span>Directory changes</span>
+          </label>
+        </div>
+
+        <div id="alertFeed" class="update-feed empty-state">
+          <p>No updates yet.</p>
+        </div>
+      </section>
+
       <main class="content-grid">
-        <section id="alerts" class="surface alert-panel">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Alerts</p>
-              <h2>Keep track.</h2>
-            </div>
-            <div class="section-actions">
-              <button id="refreshFeedButton" class="button ghost-button" type="button">
-                Refresh
-              </button>
-              <button id="markAlertsReadButton" class="button secondary-button" type="button">
-                Mark reviewed
-              </button>
-            </div>
-          </div>
+        <div class="tab-strip">
+          <button class="tab-button is-active" type="button" data-tab-target="opportunitiesTab">
+            Opportunities
+          </button>
+          <button class="tab-button" type="button" data-tab-target="directoryTab">Directory</button>
+          <button class="tab-button" type="button" data-tab-target="seenTab">Seen</button>
+        </div>
 
-          <div class="sync-strip">
-            <span id="syncState">Loading live data...</span>
-            <span id="feedTimestamp">Feed timestamp pending</span>
-          </div>
-
-          <div class="alert-controls">
-            <label class="toggle-card">
-              <input id="notificationsToggle" type="checkbox" />
-              <span>Browser notifications</span>
-            </label>
-            <label class="toggle-card">
-              <input id="watchParisToggle" type="checkbox" checked />
-              <span>Paris</span>
-            </label>
-            <label class="toggle-card">
-              <input id="watchLuxembourgToggle" type="checkbox" checked />
-              <span>Luxembourg</span>
-            </label>
-            <label class="toggle-card">
-              <input id="watchHiringToggle" type="checkbox" checked />
-              <span>Opportunities</span>
-            </label>
-            <label class="toggle-card">
-              <input id="watchDirectoryToggle" type="checkbox" checked />
-              <span>Directory changes</span>
-            </label>
-          </div>
-
-          <div class="alert-summary">
-            <div>
-              <span class="summary-label">Unread alerts</span>
-              <strong id="unreadAlertCount">0</strong>
-            </div>
-            <p id="alertStatusText">Alerts appear here when new firms or links are added.</p>
-          </div>
-
-          <div id="alertFeed" class="alert-feed empty-state">
-            <p>No alerts yet. When the shortlist changes, updates show here.</p>
-          </div>
-        </section>
-
-        <section id="hiring" class="surface section-panel">
+        <section id="opportunitiesTab" class="surface section-panel tab-panel is-active">
           <div class="section-head">
             <div>
               <p class="section-kicker">Opportunities</p>
               <h2>Open applications.</h2>
             </div>
-            <p class="section-meta">Compact view, more firms on screen, fewer clicks.</p>
+            <p class="section-meta">Verified routes first, direct contact second.</p>
           </div>
 
           <div class="filters">
@@ -145,6 +155,7 @@
                   <th>Focus</th>
                   <th>Status</th>
                   <th>Links</th>
+                  <th>Track</th>
                 </tr>
               </thead>
               <tbody id="hiringTableBody"></tbody>
@@ -152,13 +163,13 @@
           </div>
         </section>
 
-        <section id="directory" class="surface section-panel">
+        <section id="directoryTab" class="surface section-panel tab-panel">
           <div class="section-head">
             <div>
               <p class="section-kicker">Directory</p>
               <h2>More firms to explore.</h2>
             </div>
-            <p class="section-meta">Separate from open roles so the research stays clean.</p>
+            <p class="section-meta">A longer target list beyond the open routes.</p>
           </div>
 
           <div class="table-shell">
@@ -170,9 +181,35 @@
                   <th>Focus</th>
                   <th>Hiring note</th>
                   <th>Links</th>
+                  <th>Track</th>
                 </tr>
               </thead>
               <tbody id="directoryTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="seenTab" class="surface section-panel tab-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Seen</p>
+              <h2>Viewed and applied.</h2>
+            </div>
+            <p class="section-meta">Your tracked firms appear here automatically.</p>
+          </div>
+
+          <div class="table-shell">
+            <table class="firm-table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Type</th>
+                  <th>City</th>
+                  <th>Status</th>
+                  <th>Links</th>
+                </tr>
+              </thead>
+              <tbody id="seenTableBody"></tbody>
             </table>
           </div>
         </section>

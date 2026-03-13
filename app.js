@@ -6,21 +6,22 @@ const cityFilter = document.getElementById("cityFilter");
 const specialtyFilter = document.getElementById("specialtyFilter");
 const hiringTableBody = document.getElementById("hiringTableBody");
 const directoryTableBody = document.getElementById("directoryTableBody");
+const seenTableBody = document.getElementById("seenTableBody");
 const alertFeed = document.getElementById("alertFeed");
-const alertStatusText = document.getElementById("alertStatusText");
-const unreadAlertCount = document.getElementById("unreadAlertCount");
 const notificationsToggle = document.getElementById("notificationsToggle");
 const watchParisToggle = document.getElementById("watchParisToggle");
 const watchLuxembourgToggle = document.getElementById("watchLuxembourgToggle");
 const watchHiringToggle = document.getElementById("watchHiringToggle");
 const watchDirectoryToggle = document.getElementById("watchDirectoryToggle");
-const markAlertsReadButton = document.getElementById("markAlertsReadButton");
 const refreshFeedButton = document.getElementById("refreshFeedButton");
 const openRouteCount = document.getElementById("openRouteCount");
 const directoryCount = document.getElementById("directoryCount");
+const seenCount = document.getElementById("seenCount");
 const featuredQuote = document.getElementById("featuredQuote");
 const syncState = document.getElementById("syncState");
 const feedTimestamp = document.getElementById("feedTimestamp");
+const tabButtons = [...document.querySelectorAll("[data-tab-target]")];
+const tabPanels = [...document.querySelectorAll(".tab-panel")];
 
 const defaultPreferences = {
   notifications: false,
@@ -28,9 +29,8 @@ const defaultPreferences = {
   watchLuxembourg: true,
   watchHiring: true,
   watchDirectory: true,
-  seenHiringDate: "2026-03-10",
-  seenDirectoryDate: "2026-03-10",
   notifiedAlertIds: [],
+  tracking: {},
 };
 
 const state = {
@@ -71,8 +71,11 @@ function formatDateTime(value) {
   });
 }
 
-function getLatestAddedOn(entries) {
-  return entries.reduce((latest, entry) => (entry.addedOn > latest ? entry.addedOn : latest), "1970-01-01");
+function matchesFilter(entry) {
+  const cityMatches = cityFilter.value === "all" || entry.city === cityFilter.value;
+  const specialtyMatches =
+    specialtyFilter.value === "all" || entry.focus.includes(specialtyFilter.value);
+  return cityMatches && specialtyMatches;
 }
 
 function getWatchedCities() {
@@ -80,13 +83,6 @@ function getWatchedCities() {
     preferences.watchParis ? "Paris" : null,
     preferences.watchLuxembourg ? "Luxembourg" : null,
   ].filter(Boolean);
-}
-
-function matchesFilter(entry) {
-  const cityMatches = cityFilter.value === "all" || entry.city === cityFilter.value;
-  const specialtyMatches =
-    specialtyFilter.value === "all" || entry.focus.includes(specialtyFilter.value);
-  return cityMatches && specialtyMatches;
 }
 
 function renderPills(items) {
@@ -108,6 +104,20 @@ function buildLinkChips(entry, mode) {
   return `<div class="table-links">${chips.join("")}</div>`;
 }
 
+function getTracking(id) {
+  return preferences.tracking[id] || { viewed: false, applied: false };
+}
+
+function renderTrackingControls(id) {
+  const tracking = getTracking(id);
+  return `
+    <div class="track-boxes">
+      <label><input type="checkbox" data-track-id="${id}" data-track-field="viewed" ${tracking.viewed ? "checked" : ""} />Viewed</label>
+      <label><input type="checkbox" data-track-id="${id}" data-track-field="applied" ${tracking.applied ? "checked" : ""} />Applied</label>
+    </div>
+  `;
+}
+
 function createHiringRow(entry) {
   return `
     <tr>
@@ -122,6 +132,7 @@ function createHiringRow(entry) {
         <div class="sub-copy">${entry.summary}</div>
       </td>
       <td data-label="Links">${buildLinkChips(entry, "hiring")}</td>
+      <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
   `;
 }
@@ -137,139 +148,161 @@ function createDirectoryRow(entry) {
       <td data-label="Focus">${renderPills(entry.focus)}</td>
       <td data-label="Hiring note">${entry.hiringState}</td>
       <td data-label="Links">${buildLinkChips(entry, "directory")}</td>
+      <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
   `;
 }
 
 function renderHiring() {
   const filtered = state.hiringOpportunities.filter(matchesFilter);
-
-  if (filtered.length === 0) {
-    hiringTableBody.innerHTML = `
-      <tr>
-        <td colspan="5">
-          <div class="empty-state">No results match this filter yet. Try another city or discipline.</div>
-        </td>
-      </tr>
+  hiringTableBody.innerHTML = filtered.length
+    ? filtered.map(createHiringRow).join("")
+    : `
+      <tr><td colspan="6"><div class="empty-state">No results match this filter yet.</div></td></tr>
     `;
-    return;
-  }
-
-  hiringTableBody.innerHTML = filtered.map(createHiringRow).join("");
 }
 
 function renderDirectory() {
   const filtered = state.agencyDirectory.filter(matchesFilter);
+  directoryTableBody.innerHTML = filtered.length
+    ? filtered.map(createDirectoryRow).join("")
+    : `
+      <tr><td colspan="6"><div class="empty-state">No agencies match this filter yet.</div></td></tr>
+    `;
+}
 
-  if (filtered.length === 0) {
-    directoryTableBody.innerHTML = `
-      <tr>
-        <td colspan="5">
-          <div class="empty-state">No agencies match this filter yet. Try another city or discipline.</div>
-        </td>
-      </tr>
+function collectSeenRows() {
+  const allEntries = [
+    ...state.hiringOpportunities.map((entry) => ({ ...entry, type: "Opportunity", note: entry.status })),
+    ...state.agencyDirectory.map((entry) => ({ ...entry, type: "Directory", note: entry.hiringState })),
+  ];
+
+  return allEntries.filter((entry) => {
+    const tracking = getTracking(entry.id);
+    return tracking.viewed || tracking.applied;
+  });
+}
+
+function renderSeen() {
+  const rows = collectSeenRows();
+  seenCount.textContent = String(rows.length);
+
+  if (rows.length === 0) {
+    seenTableBody.innerHTML = `
+      <tr><td colspan="5"><div class="empty-state">Tracked firms will appear here after you tick Viewed or Applied.</div></td></tr>
     `;
     return;
   }
 
-  directoryTableBody.innerHTML = filtered.map(createDirectoryRow).join("");
+  seenTableBody.innerHTML = rows
+    .map((entry) => {
+      const tracking = getTracking(entry.id);
+      const status = [
+        tracking.viewed ? "Viewed" : null,
+        tracking.applied ? "Applied" : null,
+      ]
+        .filter(Boolean)
+        .join(" • ");
+
+      return `
+        <tr>
+          <td data-label="Company">
+            <div class="company-name">${entry.name}</div>
+            <div class="sub-copy">${entry.note}</div>
+          </td>
+          <td data-label="Type">${entry.type}</td>
+          <td data-label="City">${entry.city}</td>
+          <td data-label="Status">${status}</td>
+          <td data-label="Links">${buildLinkChips(entry, entry.type === "Opportunity" ? "hiring" : "directory")}</td>
+        </tr>
+      `;
+    })
+    .join("");
 }
 
-function collectAlerts() {
+function collectUpdates() {
   const watchedCities = getWatchedCities();
-  const alerts = [];
+  const updates = [];
 
   if (preferences.watchHiring) {
     state.hiringOpportunities
-      .filter((entry) => entry.addedOn > preferences.seenHiringDate)
       .filter((entry) => watchedCities.includes(entry.city))
       .forEach((entry) => {
-        alerts.push({
+        updates.push({
           id: `hiring-${entry.id}`,
-          kind: "New opportunity",
-          title: `${entry.name} has an active route to apply`,
+          title: `${entry.name} is on the open list`,
           meta: `${entry.city} • ${entry.status}`,
           url: entry.hiringUrl || entry.sourceUrl,
+          addedOn: entry.addedOn,
         });
       });
   }
 
   if (preferences.watchDirectory) {
     state.agencyDirectory
-      .filter((entry) => entry.addedOn > preferences.seenDirectoryDate)
       .filter((entry) => watchedCities.includes(entry.city))
       .forEach((entry) => {
-        alerts.push({
+        updates.push({
           id: `directory-${entry.id}`,
-          kind: "New agency added",
-          title: `${entry.name} was added to the directory`,
+          title: `${entry.name} is in the target directory`,
           meta: `${entry.city} • ${entry.hiringState}`,
           url: entry.siteUrl,
+          addedOn: entry.addedOn,
         });
       });
   }
 
-  return alerts;
+  return updates.sort((a, b) => b.addedOn.localeCompare(a.addedOn)).slice(0, 6);
 }
 
-function maybeSendNotification(alerts) {
-  if (!preferences.notifications || !("Notification" in window)) {
+function maybeSendNotification(updates) {
+  if (!preferences.notifications || !("Notification" in window) || Notification.permission !== "granted") {
     return;
   }
 
-  if (Notification.permission !== "granted") {
+  const fresh = updates.filter((item) => !preferences.notifiedAlertIds.includes(item.id));
+  if (fresh.length === 0) {
     return;
   }
 
-  const freshAlerts = alerts.filter((alert) => !preferences.notifiedAlertIds.includes(alert.id));
-  if (freshAlerts.length === 0) {
-    return;
-  }
-
-  const notification = new Notification("Marketing internship updates", {
-    body: `${freshAlerts.length} new alert${freshAlerts.length > 1 ? "s" : ""} in Paris / Luxembourg.`,
+  const notification = new Notification("Daily internship updates", {
+    body: `${fresh.length} recent update${fresh.length > 1 ? "s" : ""} on the shortlist.`,
   });
-
   notification.onclick = () => window.focus();
-  preferences.notifiedAlertIds = [...preferences.notifiedAlertIds, ...freshAlerts.map((item) => item.id)];
+  preferences.notifiedAlertIds = [...preferences.notifiedAlertIds, ...fresh.map((item) => item.id)];
   savePreferences();
 }
 
-function renderAlerts() {
-  const alerts = collectAlerts();
-  unreadAlertCount.textContent = String(alerts.length);
-
-  if (alerts.length === 0) {
-    alertStatusText.textContent = "Everything is reviewed.";
-    alertFeed.className = "alert-feed empty-state";
-    alertFeed.innerHTML = "<p>No unread alerts right now.</p>";
+function renderUpdates() {
+  const updates = collectUpdates();
+  if (updates.length === 0) {
+    alertFeed.className = "update-feed empty-state";
+    alertFeed.innerHTML = "<p>No updates right now.</p>";
     return;
   }
 
-  alertStatusText.textContent = "Fresh items are waiting.";
-  alertFeed.className = "alert-feed";
-  alertFeed.innerHTML = alerts
+  alertFeed.className = "update-feed";
+  alertFeed.innerHTML = updates
     .map(
-      (alert) => `
-        <article class="alert-card">
-          <span>${alert.kind}</span>
-          <strong>${alert.title}</strong>
-          <p class="table-note">${alert.meta}</p>
-          <a class="link-chip secondary" href="${alert.url}" target="_blank" rel="noreferrer">Open</a>
+      (update) => `
+        <article class="update-card">
+          <span>${update.meta}</span>
+          <strong>${update.title}</strong>
+          <p>${update.addedOn}</p>
+          <a class="link-chip secondary" href="${update.url}" target="_blank" rel="noreferrer">Open</a>
         </article>
       `,
     )
     .join("");
 
-  maybeSendNotification(alerts);
+  maybeSendNotification(updates);
 }
 
 function renderQuote() {
-  const quote =
-    state.motivationalQuotes[0] || {
-      quote: "Keep moving. The right door often opens after the next application.",
-      author: "Unknown",
-    };
+  const quote = state.motivationalQuotes[0] || {
+    quote: "Success is the sum of small efforts, repeated day in and day out.",
+    author: "Robert Collier",
+  };
 
   featuredQuote.innerHTML = `
     <p class="section-kicker">One reminder</p>
@@ -281,13 +314,15 @@ function renderQuote() {
 function renderStats() {
   openRouteCount.textContent = String(state.hiringOpportunities.length);
   directoryCount.textContent = String(state.agencyDirectory.length);
+  seenCount.textContent = String(collectSeenRows().length);
 }
 
 function renderAll() {
   renderStats();
   renderHiring();
   renderDirectory();
-  renderAlerts();
+  renderSeen();
+  renderUpdates();
   renderQuote();
 }
 
@@ -339,30 +374,11 @@ async function fetchLiveData(reason = "sync") {
     setSyncStatus("Live feed connected", "sync-live");
   } catch (error) {
     setSyncStatus("Live feed unavailable", "sync-error");
-
-    if (state.hiringOpportunities.length === 0) {
-      hiringTableBody.innerHTML = `
-        <tr>
-          <td colspan="5">
-            <div class="empty-state">The live data feed could not be loaded.</div>
-          </td>
-        </tr>
-      `;
-      directoryTableBody.innerHTML = "";
-    }
-
     console.error(error);
   } finally {
     state.isRefreshing = false;
     refreshFeedButton.disabled = false;
   }
-}
-
-function markAlertsRead() {
-  preferences.seenHiringDate = getLatestAddedOn(state.hiringOpportunities);
-  preferences.seenDirectoryDate = getLatestAddedOn(state.agencyDirectory);
-  savePreferences();
-  renderAlerts();
 }
 
 function startPolling() {
@@ -373,6 +389,33 @@ function startPolling() {
   state.pollingHandle = window.setInterval(() => {
     fetchLiveData("poll");
   }, POLL_INTERVAL_MS);
+}
+
+function switchTab(targetId) {
+  tabButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.tabTarget === targetId);
+  });
+
+  tabPanels.forEach((panel) => {
+    panel.classList.toggle("is-active", panel.id === targetId);
+  });
+}
+
+function handleTrackingChange(event) {
+  const input = event.target.closest("input[data-track-id]");
+  if (!input) {
+    return;
+  }
+
+  const { trackId, trackField } = input.dataset;
+  const current = getTracking(trackId);
+  preferences.tracking[trackId] = {
+    ...current,
+    [trackField]: input.checked,
+  };
+  savePreferences();
+  renderSeen();
+  renderStats();
 }
 
 function attachEvents() {
@@ -388,7 +431,6 @@ function attachEvents() {
 
   notificationsToggle.addEventListener("change", async (event) => {
     const wantsNotifications = event.target.checked;
-
     if (wantsNotifications && "Notification" in window) {
       const result = await Notification.requestPermission();
       preferences.notifications = result === "granted";
@@ -398,7 +440,6 @@ function attachEvents() {
 
     syncControls();
     savePreferences();
-    renderAlerts();
   });
 
   [
@@ -410,12 +451,17 @@ function attachEvents() {
     element.addEventListener("change", (event) => {
       preferences[key] = event.target.checked;
       savePreferences();
-      renderAlerts();
+      renderUpdates();
     });
   });
 
-  markAlertsReadButton.addEventListener("click", markAlertsRead);
   refreshFeedButton.addEventListener("click", () => fetchLiveData("manual"));
+  hiringTableBody.addEventListener("change", handleTrackingChange);
+  directoryTableBody.addEventListener("change", handleTrackingChange);
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => switchTab(button.dataset.tabTarget));
+  });
 }
 
 function init() {
