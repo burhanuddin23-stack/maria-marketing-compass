@@ -1,22 +1,22 @@
 const DATA_URL = "./data/marketing-companies.json";
 const POLL_INTERVAL_MS = 60_000;
-const STORAGE_KEY = "maria-marketing-compass";
+const STORAGE_KEY = "urban-design-shortlist";
 
-const cityFilter = document.getElementById("cityFilter");
-const specialtyFilter = document.getElementById("specialtyFilter");
-const hiringTableBody = document.getElementById("hiringTableBody");
+const locationFilter = document.getElementById("locationFilter");
+const disciplineFilter = document.getElementById("disciplineFilter");
+const usOpeningsTableBody = document.getElementById("usOpeningsTableBody");
+const europeOpeningsTableBody = document.getElementById("europeOpeningsTableBody");
 const directoryTableBody = document.getElementById("directoryTableBody");
 const seenTableBody = document.getElementById("seenTableBody");
 const alertFeed = document.getElementById("alertFeed");
 const notificationsToggle = document.getElementById("notificationsToggle");
-const watchParisToggle = document.getElementById("watchParisToggle");
-const watchLuxembourgToggle = document.getElementById("watchLuxembourgToggle");
-const watchHiringToggle = document.getElementById("watchHiringToggle");
+const watchUsToggle = document.getElementById("watchUsToggle");
+const watchEuropeToggle = document.getElementById("watchEuropeToggle");
 const watchDirectoryToggle = document.getElementById("watchDirectoryToggle");
 const refreshFeedButton = document.getElementById("refreshFeedButton");
-const openRouteCount = document.getElementById("openRouteCount");
+const usOpeningsCount = document.getElementById("usOpeningsCount");
+const europeOpeningsCount = document.getElementById("europeOpeningsCount");
 const directoryCount = document.getElementById("directoryCount");
-const seenCount = document.getElementById("seenCount");
 const featuredQuote = document.getElementById("featuredQuote");
 const syncState = document.getElementById("syncState");
 const feedTimestamp = document.getElementById("feedTimestamp");
@@ -25,17 +25,17 @@ const tabPanels = [...document.querySelectorAll(".tab-panel")];
 
 const defaultPreferences = {
   notifications: false,
-  watchParis: true,
-  watchLuxembourg: true,
-  watchHiring: true,
+  watchUs: true,
+  watchEurope: true,
   watchDirectory: true,
   notifiedAlertIds: [],
   tracking: {},
 };
 
 const state = {
-  hiringOpportunities: [],
-  agencyDirectory: [],
+  usOpenings: [],
+  europeUkOpenings: [],
+  generalDirectory: [],
   motivationalQuotes: [],
   updatedAt: null,
   pollingHandle: null,
@@ -57,7 +57,7 @@ function savePreferences() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(preferences));
   } catch {
-    // Ignore storage failures and keep the page usable.
+    // Ignore storage failures.
   }
 }
 
@@ -71,37 +71,44 @@ function formatDateTime(value) {
   });
 }
 
-function matchesFilter(entry) {
-  const cityMatches = cityFilter.value === "all" || entry.city === cityFilter.value;
-  const specialtyMatches =
-    specialtyFilter.value === "all" || entry.focus.includes(specialtyFilter.value);
-  return cityMatches && specialtyMatches;
+function getAllEntries() {
+  return [...state.usOpenings, ...state.europeUkOpenings, ...state.generalDirectory];
 }
 
-function getWatchedCities() {
-  return [
-    preferences.watchParis ? "Paris" : null,
-    preferences.watchLuxembourg ? "Luxembourg" : null,
-  ].filter(Boolean);
+function populateFilters() {
+  const locations = [...new Set(getAllEntries().map((entry) => entry.locationLabel))].sort();
+  const disciplines = [...new Set(getAllEntries().flatMap((entry) => entry.focus))].sort();
+
+  const selectedLocation = locationFilter.value || "all";
+  const selectedDiscipline = disciplineFilter.value || "all";
+
+  locationFilter.innerHTML =
+    '<option value="all">All locations</option>' +
+    locations.map((item) => `<option value="${item}">${item}</option>`).join("");
+  disciplineFilter.innerHTML =
+    '<option value="all">All disciplines</option>' +
+    disciplines.map((item) => `<option value="${item}">${item}</option>`).join("");
+
+  locationFilter.value = locations.includes(selectedLocation) ? selectedLocation : "all";
+  disciplineFilter.value = disciplines.includes(selectedDiscipline) ? selectedDiscipline : "all";
+}
+
+function matchesFilter(entry) {
+  const locationMatches =
+    locationFilter.value === "all" || entry.locationLabel === locationFilter.value;
+  const disciplineMatches =
+    disciplineFilter.value === "all" || entry.focus.includes(disciplineFilter.value);
+  return locationMatches && disciplineMatches;
 }
 
 function renderPills(items) {
   return `<div class="pill-list">${items.map((item) => `<span class="pill">${item}</span>`).join("")}</div>`;
 }
 
-function buildLinkChips(entry, mode) {
-  const chips = [
-    `<a class="link-chip secondary" href="${entry.siteUrl}" target="_blank" rel="noreferrer">Website</a>`,
-    `<a class="link-chip secondary" href="${entry.sourceUrl}" target="_blank" rel="noreferrer">Source</a>`,
-  ];
-
-  if (mode === "hiring" && entry.hiringUrl) {
-    chips.unshift(
-      `<a class="link-chip" href="${entry.hiringUrl}" target="_blank" rel="noreferrer">Hiring</a>`,
-    );
-  }
-
-  return `<div class="table-links">${chips.join("")}</div>`;
+function buildOpenLink(entry) {
+  const href = entry.applyUrl || entry.siteUrl;
+  const label = entry.applyUrl ? "Careers" : "Website";
+  return `<a class="link-chip" href="${href}" target="_blank" rel="noreferrer">${label}</a>`;
 }
 
 function getTracking(id) {
@@ -118,20 +125,20 @@ function renderTrackingControls(id) {
   `;
 }
 
-function createHiringRow(entry) {
+function createOpeningRow(entry) {
   return `
     <tr>
-      <td data-label="Company">
+      <td data-label="Firm">
         <div class="company-name">${entry.name}</div>
-        <div class="sub-copy">${entry.internshipFit}</div>
+        <div class="sub-copy">${entry.fit}</div>
       </td>
-      <td data-label="City">${entry.city}</td>
+      <td data-label="Base">${entry.locationLabel}</td>
       <td data-label="Focus">${renderPills(entry.focus)}</td>
-      <td data-label="Status">
+      <td data-label="Route">
         <div class="company-name">${entry.status}</div>
         <div class="sub-copy">${entry.summary}</div>
       </td>
-      <td data-label="Links">${buildLinkChips(entry, "hiring")}</td>
+      <td data-label="Open">${buildOpenLink(entry)}</td>
       <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
   `;
@@ -140,41 +147,34 @@ function createHiringRow(entry) {
 function createDirectoryRow(entry) {
   return `
     <tr>
-      <td data-label="Company">
+      <td data-label="Firm">
         <div class="company-name">${entry.name}</div>
         <div class="sub-copy">${entry.summary}</div>
       </td>
-      <td data-label="City">${entry.city}</td>
+      <td data-label="Base">${entry.locationLabel}</td>
       <td data-label="Focus">${renderPills(entry.focus)}</td>
-      <td data-label="Hiring note">${entry.hiringState}</td>
-      <td data-label="Links">${buildLinkChips(entry, "directory")}</td>
+      <td data-label="Note">
+        <div class="company-name">${entry.hiringState}</div>
+        <div class="sub-copy">${entry.note}</div>
+      </td>
+      <td data-label="Open">${buildOpenLink(entry)}</td>
       <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
   `;
 }
 
-function renderHiring() {
-  const filtered = state.hiringOpportunities.filter(matchesFilter);
-  hiringTableBody.innerHTML = filtered.length
-    ? filtered.map(createHiringRow).join("")
-    : `
-      <tr><td colspan="6"><div class="empty-state">No results match this filter yet.</div></td></tr>
-    `;
-}
-
-function renderDirectory() {
-  const filtered = state.agencyDirectory.filter(matchesFilter);
-  directoryTableBody.innerHTML = filtered.length
-    ? filtered.map(createDirectoryRow).join("")
-    : `
-      <tr><td colspan="6"><div class="empty-state">No agencies match this filter yet.</div></td></tr>
-    `;
+function renderTable(body, entries, rowBuilder, emptyMessage, columnCount) {
+  const filtered = entries.filter(matchesFilter);
+  body.innerHTML = filtered.length
+    ? filtered.map(rowBuilder).join("")
+    : `<tr><td colspan="${columnCount}"><div class="empty-state">${emptyMessage}</div></td></tr>`;
 }
 
 function collectSeenRows() {
   const allEntries = [
-    ...state.hiringOpportunities.map((entry) => ({ ...entry, type: "Opportunity", note: entry.status })),
-    ...state.agencyDirectory.map((entry) => ({ ...entry, type: "Directory", note: entry.hiringState })),
+    ...state.usOpenings.map((entry) => ({ ...entry, type: "US opening", note: entry.status })),
+    ...state.europeUkOpenings.map((entry) => ({ ...entry, type: "Europe / UK", note: entry.status })),
+    ...state.generalDirectory.map((entry) => ({ ...entry, type: "Directory", note: entry.hiringState })),
   ];
 
   return allEntries.filter((entry) => {
@@ -185,35 +185,30 @@ function collectSeenRows() {
 
 function renderSeen() {
   const rows = collectSeenRows();
-  seenCount.textContent = String(rows.length);
 
   if (rows.length === 0) {
-    seenTableBody.innerHTML = `
-      <tr><td colspan="5"><div class="empty-state">Tracked firms will appear here after you tick Viewed or Applied.</div></td></tr>
-    `;
+    seenTableBody.innerHTML =
+      '<tr><td colspan="5"><div class="empty-state">Tracked firms will appear here after you tick Viewed or Applied.</div></td></tr>';
     return;
   }
 
   seenTableBody.innerHTML = rows
     .map((entry) => {
       const tracking = getTracking(entry.id);
-      const status = [
-        tracking.viewed ? "Viewed" : null,
-        tracking.applied ? "Applied" : null,
-      ]
+      const status = [tracking.viewed ? "Viewed" : null, tracking.applied ? "Applied" : null]
         .filter(Boolean)
         .join(" • ");
 
       return `
         <tr>
-          <td data-label="Company">
+          <td data-label="Firm">
             <div class="company-name">${entry.name}</div>
             <div class="sub-copy">${entry.note}</div>
           </td>
           <td data-label="Type">${entry.type}</td>
-          <td data-label="City">${entry.city}</td>
+          <td data-label="Base">${entry.locationLabel}</td>
           <td data-label="Status">${status}</td>
-          <td data-label="Links">${buildLinkChips(entry, entry.type === "Opportunity" ? "hiring" : "directory")}</td>
+          <td data-label="Open">${buildOpenLink(entry)}</td>
         </tr>
       `;
     })
@@ -221,38 +216,45 @@ function renderSeen() {
 }
 
 function collectUpdates() {
-  const watchedCities = getWatchedCities();
   const updates = [];
 
-  if (preferences.watchHiring) {
-    state.hiringOpportunities
-      .filter((entry) => watchedCities.includes(entry.city))
-      .forEach((entry) => {
-        updates.push({
-          id: `hiring-${entry.id}`,
-          title: `${entry.name} is on the open list`,
-          meta: `${entry.city} • ${entry.status}`,
-          url: entry.hiringUrl || entry.sourceUrl,
-          addedOn: entry.addedOn,
-        });
+  if (preferences.watchUs) {
+    state.usOpenings.forEach((entry) => {
+      updates.push({
+        id: `us-${entry.id}`,
+        title: `${entry.name} is on the US shortlist`,
+        meta: `${entry.locationLabel} • ${entry.status}`,
+        url: entry.applyUrl || entry.siteUrl,
+        addedOn: entry.addedOn,
       });
+    });
+  }
+
+  if (preferences.watchEurope) {
+    state.europeUkOpenings.forEach((entry) => {
+      updates.push({
+        id: `eu-${entry.id}`,
+        title: `${entry.name} is on the Europe + UK shortlist`,
+        meta: `${entry.locationLabel} • ${entry.status}`,
+        url: entry.applyUrl || entry.siteUrl,
+        addedOn: entry.addedOn,
+      });
+    });
   }
 
   if (preferences.watchDirectory) {
-    state.agencyDirectory
-      .filter((entry) => watchedCities.includes(entry.city))
-      .forEach((entry) => {
-        updates.push({
-          id: `directory-${entry.id}`,
-          title: `${entry.name} is in the target directory`,
-          meta: `${entry.city} • ${entry.hiringState}`,
-          url: entry.siteUrl,
-          addedOn: entry.addedOn,
-        });
+    state.generalDirectory.forEach((entry) => {
+      updates.push({
+        id: `dir-${entry.id}`,
+        title: `${entry.name} is in the general directory`,
+        meta: `${entry.locationLabel} • ${entry.hiringState}`,
+        url: entry.siteUrl,
+        addedOn: entry.addedOn,
       });
+    });
   }
 
-  return updates.sort((a, b) => b.addedOn.localeCompare(a.addedOn)).slice(0, 6);
+  return updates.sort((a, b) => b.addedOn.localeCompare(a.addedOn)).slice(0, 8);
 }
 
 function maybeSendNotification(updates) {
@@ -265,8 +267,8 @@ function maybeSendNotification(updates) {
     return;
   }
 
-  const notification = new Notification("Daily internship updates", {
-    body: `${fresh.length} recent update${fresh.length > 1 ? "s" : ""} on the shortlist.`,
+  const notification = new Notification("Urban design shortlist updates", {
+    body: `${fresh.length} recent change${fresh.length > 1 ? "s" : ""} on the shortlist.`,
   });
   notification.onclick = () => window.focus();
   preferences.notifiedAlertIds = [...preferences.notifiedAlertIds, ...fresh.map((item) => item.id)];
@@ -298,29 +300,63 @@ function renderUpdates() {
   maybeSendNotification(updates);
 }
 
-function renderQuote() {
-  const quote = state.motivationalQuotes[0] || {
-    quote: "Success is the sum of small efforts, repeated day in and day out.",
-    author: "Robert Collier",
-  };
+function getQuoteForNow() {
+  const quotes = state.motivationalQuotes;
+  if (!quotes.length) {
+    return {
+      prompt: "One reminder",
+      quote: "Stay consistent. Progress compounds even when the page feels quiet.",
+      author: "Codex",
+    };
+  }
 
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((now - startOfYear) / 86_400_000);
+  const timeBlock = Math.floor(now.getHours() / 6);
+  const quoteIndex = (dayOfYear + timeBlock) % quotes.length;
+  return quotes[quoteIndex];
+}
+
+function renderQuote() {
+  const quote = getQuoteForNow();
   featuredQuote.innerHTML = `
-    <p class="section-kicker">One reminder</p>
+    <p class="section-kicker">${quote.prompt}</p>
     <blockquote>“${quote.quote}”</blockquote>
     <footer>${quote.author}</footer>
   `;
 }
 
 function renderStats() {
-  openRouteCount.textContent = String(state.hiringOpportunities.length);
-  directoryCount.textContent = String(state.agencyDirectory.length);
-  seenCount.textContent = String(collectSeenRows().length);
+  usOpeningsCount.textContent = String(state.usOpenings.length);
+  europeOpeningsCount.textContent = String(state.europeUkOpenings.length);
+  directoryCount.textContent = String(state.generalDirectory.length);
 }
 
 function renderAll() {
+  populateFilters();
   renderStats();
-  renderHiring();
-  renderDirectory();
+  renderTable(
+    usOpeningsTableBody,
+    state.usOpenings,
+    createOpeningRow,
+    "No US openings match this filter yet.",
+    6,
+  );
+  renderTable(
+    europeOpeningsTableBody,
+    state.europeUkOpenings,
+    createOpeningRow,
+    "No Europe or UK openings match this filter yet.",
+    6,
+  );
+  renderTable(
+    directoryTableBody,
+    state.generalDirectory,
+    createDirectoryRow,
+    "No directory firms match this filter yet.",
+    6,
+  );
   renderSeen();
   renderUpdates();
   renderQuote();
@@ -328,9 +364,8 @@ function renderAll() {
 
 function syncControls() {
   notificationsToggle.checked = preferences.notifications;
-  watchParisToggle.checked = preferences.watchParis;
-  watchLuxembourgToggle.checked = preferences.watchLuxembourg;
-  watchHiringToggle.checked = preferences.watchHiring;
+  watchUsToggle.checked = preferences.watchUs;
+  watchEuropeToggle.checked = preferences.watchEurope;
   watchDirectoryToggle.checked = preferences.watchDirectory;
 }
 
@@ -346,8 +381,9 @@ function updateFeedTimestamp() {
 }
 
 function applyData(payload) {
-  state.hiringOpportunities = Array.isArray(payload.hiringOpportunities) ? payload.hiringOpportunities : [];
-  state.agencyDirectory = Array.isArray(payload.agencyDirectory) ? payload.agencyDirectory : [];
+  state.usOpenings = Array.isArray(payload.usOpenings) ? payload.usOpenings : [];
+  state.europeUkOpenings = Array.isArray(payload.europeUkOpenings) ? payload.europeUkOpenings : [];
+  state.generalDirectory = Array.isArray(payload.generalDirectory) ? payload.generalDirectory : [];
   state.motivationalQuotes = Array.isArray(payload.motivationalQuotes) ? payload.motivationalQuotes : [];
   state.updatedAt = payload.updatedAt || new Date().toISOString();
   updateFeedTimestamp();
@@ -415,18 +451,11 @@ function handleTrackingChange(event) {
   };
   savePreferences();
   renderSeen();
-  renderStats();
 }
 
 function attachEvents() {
-  cityFilter.addEventListener("change", () => {
-    renderHiring();
-    renderDirectory();
-  });
-
-  specialtyFilter.addEventListener("change", () => {
-    renderHiring();
-    renderDirectory();
+  [locationFilter, disciplineFilter].forEach((element) => {
+    element.addEventListener("change", renderAll);
   });
 
   notificationsToggle.addEventListener("change", async (event) => {
@@ -443,9 +472,8 @@ function attachEvents() {
   });
 
   [
-    [watchParisToggle, "watchParis"],
-    [watchLuxembourgToggle, "watchLuxembourg"],
-    [watchHiringToggle, "watchHiring"],
+    [watchUsToggle, "watchUs"],
+    [watchEuropeToggle, "watchEurope"],
     [watchDirectoryToggle, "watchDirectory"],
   ].forEach(([element, key]) => {
     element.addEventListener("change", (event) => {
@@ -456,7 +484,8 @@ function attachEvents() {
   });
 
   refreshFeedButton.addEventListener("click", () => fetchLiveData("manual"));
-  hiringTableBody.addEventListener("change", handleTrackingChange);
+  usOpeningsTableBody.addEventListener("change", handleTrackingChange);
+  europeOpeningsTableBody.addEventListener("change", handleTrackingChange);
   directoryTableBody.addEventListener("change", handleTrackingChange);
 
   tabButtons.forEach((button) => {

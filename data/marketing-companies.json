@@ -1,475 +1,890 @@
 {
-  "updatedAt": "2026-03-15T12:02:57+01:00",
-  "hiringOpportunities": [
+  "updatedAt": "2026-03-15T19:05:00+01:00",
+  "usOpenings": [
     {
-      "id": "betc-paris",
-      "name": "BETC",
-      "city": "Paris",
+      "id": "land-collective-pittsburgh",
+      "name": "Land Collective",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
       "focus": [
-        "Creative",
-        "Branding",
-        "Social"
-      ],
-      "status": "Open applications",
-      "internshipFit": "Good for internships and junior creative profiles.",
-      "summary": "BETC runs a dedicated careers hub for its Paris-based creative network and is a strong target for brand, content, and strategy internships.",
-      "hiringUrl": "https://betc.teamtailor.com/#jobs",
-      "siteUrl": "https://www.betc.com/",
-      "sourceUrl": "https://betc.teamtailor.com/#jobs",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "rosa-paris",
-      "name": "ROSA PARIS",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Social",
-        "Branding"
-      ],
-      "status": "Teamtailor jobs live",
-      "internshipFit": "Worth checking for junior and stage-style roles.",
-      "summary": "ROSA PARIS publishes current openings through Teamtailor, which makes it one of the easier Paris agencies to monitor for fresh internship-friendly roles.",
-      "hiringUrl": "https://rosaparis.teamtailor.com/jobs",
-      "siteUrl": "https://www.rosaparis.com/",
-      "sourceUrl": "https://rosaparis.teamtailor.com/jobs",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "wellcom-paris",
-      "name": "Wellcom",
-      "city": "Paris",
-      "focus": [
-        "PR",
-        "Digital",
-        "Social"
-      ],
-      "status": "Traineeship route published",
-      "internshipFit": "Directly relevant for PR, influence, and communications internships.",
-      "summary": "Wellcom keeps a visible recruitment page including traineeship wording, which is useful for internship outreach in communications and digital influence.",
-      "hiringUrl": "https://wellcom.fr/carrieres/",
-      "siteUrl": "https://wellcom.fr/",
-      "sourceUrl": "https://wellcom.fr/carrieres/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "ogilvy-france",
-      "name": "Ogilvy Paris",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Digital",
-        "Branding"
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
       ],
       "status": "Careers page active",
-      "internshipFit": "Good for broad network applications and early-career outreach.",
-      "summary": "Ogilvy France routes candidates through its central careers flow, making it a practical target for internships across account, creative, and digital teams.",
-      "hiringUrl": "https://ogilvy.wd3.myworkdayjobs.com/OgilvyCareers?locations=1f4f3cc50fdf1001ddf999cf4e5b0000",
-      "siteUrl": "https://www.ogilvy.fr/",
-      "sourceUrl": "https://www.ogilvy.com/fr/careers",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "vml-france",
-      "name": "VML France",
-      "city": "Paris",
-      "focus": [
-        "Digital",
-        "Creative",
-        "Social"
-      ],
-      "status": "Global careers route",
-      "internshipFit": "Useful for digital marketing, CRM, and social applications.",
-      "summary": "VML France is part of a larger network, but its careers route is active and worth checking for Paris-based junior and internship-friendly listings.",
-      "hiringUrl": "https://www.vml.com/france/careers",
-      "siteUrl": "https://www.vml.com/france",
-      "sourceUrl": "https://www.vml.com/france/careers",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "havas-paris",
-      "name": "Havas Paris",
-      "city": "Paris",
-      "focus": [
-        "PR",
-        "Branding",
-        "Social"
-      ],
-      "status": "Recruitment contact open",
-      "internshipFit": "Best for direct outreach with a tailored CV and portfolio.",
-      "summary": "Havas Paris keeps a recruitment contact on its official site, which is useful when no exact internship post is visible but the agency is still approachable.",
-      "hiringUrl": "https://www.havasparis.com/contact/",
-      "siteUrl": "https://www.havasparis.com/",
-      "sourceUrl": "https://www.havasparis.com/contact/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "three52",
-      "name": "Three52",
-      "city": "Luxembourg",
-      "focus": [
-        "Digital",
-        "Creative",
-        "Branding"
-      ],
-      "status": "Agency hiring page live",
-      "internshipFit": "Solid target for digital design and web-oriented internships.",
-      "summary": "Three52 maintains an active careers page and is one of the clearest digital agency routes in Luxembourg for internship-style outreach.",
-      "hiringUrl": "https://three52agency.com/careers/",
-      "siteUrl": "https://three52agency.com/",
-      "sourceUrl": "https://three52agency.com/careers/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "point-a",
-      "name": "Point A",
-      "city": "Luxembourg",
-      "focus": [
-        "Branding",
-        "Digital",
-        "Creative"
-      ],
-      "status": "Open applications via contact",
-      "internshipFit": "Good for proactive internship outreach by email.",
-      "summary": "Point A welcomes direct applications through its official contact channel and outlines careers interest on its site, making it a practical outreach target in Luxembourg.",
-      "hiringUrl": "https://pointamarketing.com/contact-us/",
-      "siteUrl": "https://pointamarketing.com/",
-      "sourceUrl": "https://pointamarketing.com/contact-us/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "vous",
-      "name": "VOUS Agency",
-      "city": "Luxembourg",
-      "focus": [
-        "Creative",
-        "Digital",
-        "Branding"
-      ],
-      "status": "Apply via jobs contact",
-      "internshipFit": "Strong fit for internships via direct jobs contact.",
-      "summary": "VOUS provides a direct jobs contact on its official contact page and has internship-role pages, making it a strong Luxembourg option for proactive applications.",
-      "hiringUrl": "https://vous.lu/contact/",
-      "siteUrl": "https://www.vous.lu/",
-      "sourceUrl": "https://vous.lu/contact/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "lola-lux",
-      "name": "lola strategy & design",
-      "city": "Luxembourg",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Social"
-      ],
-      "status": "Careers page active",
-      "internshipFit": "Good fit for junior or self-application routes.",
-      "summary": "Lola keeps a dedicated careers page with open roles and self-application, making it one of the clearer internship-friendly agency paths in Luxembourg.",
-      "hiringUrl": "https://www.lola.lu/careers/",
-      "siteUrl": "https://www.lola.lu/",
-      "sourceUrl": "https://www.lola.lu/careers/",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "marcel-paris",
-      "name": "Marcel",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Social"
-      ],
-      "status": "Jobs contact published",
-      "internshipFit": "Good fit for proactive internship and junior outreach via jobs contact.",
-      "summary": "Marcel official contact page includes a job opportunity route, making it a practical Paris agency for internship outreach.",
-      "hiringUrl": "https://marcelww.com/contact",
-      "siteUrl": "https://marcelww.com/",
-      "sourceUrl": "https://marcelww.com/contact",
+      "fit": "Strong local target for fresher urban designers who can show public-space and site thinking.",
+      "summary": "Pittsburgh-based practice with a visible careers page and work that overlaps landscape, public realm, and urban-scale design.",
+      "applyUrl": "https://land-collective.com/careers/",
+      "siteUrl": "https://land-collective.com/",
+      "sourceUrl": "https://land-collective.com/careers/",
       "addedOn": "2026-03-15"
     },
     {
-      "id": "branderella-paris",
-      "name": "Branderella",
-      "city": "Paris",
+      "id": "smithgee-pittsburgh",
+      "name": "SmithGee Studio",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
       "focus": [
-        "Branding",
-        "Creative",
-        "Digital"
+        "Urban Design",
+        "Architecture",
+        "Planning"
       ],
-      "status": "Open application channel",
-      "internshipFit": "Useful for proactive internship and junior applications with portfolio.",
-      "summary": "Branderella maintains an official careers page inviting direct applications, making it a practical Paris outreach target.",
-      "hiringUrl": "https://www.branderella.fr/careers",
-      "siteUrl": "https://www.branderella.fr/",
-      "sourceUrl": "https://www.branderella.fr/careers",
+      "status": "Internship route published",
+      "fit": "Useful for freshers because the studio explicitly references internships and learning exposure.",
+      "summary": "Official internships page makes this one of the clearer Pittsburgh-area practices for emerging applicants.",
+      "applyUrl": "https://www.smithgee.com/careers/internships",
+      "siteUrl": "https://www.smithgee.com/",
+      "sourceUrl": "https://www.smithgee.com/careers/internships",
       "addedOn": "2026-03-15"
     },
     {
-      "id": "sam-young-lux",
-      "name": "SAM&YOUNG",
-      "city": "Luxembourg",
+      "id": "perkins-eastman-pittsburgh",
+      "name": "Perkins Eastman",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
       "focus": [
-        "Creative",
-        "Digital",
-        "Branding"
+        "Urban Design",
+        "Planning",
+        "Architecture"
       ],
-      "status": "Careers + contact route live",
-      "internshipFit": "Relevant for direct internship outreach and creative junior applications.",
-      "summary": "SAM&YOUNG publishes official careers and contact pages with a clear application channel, including internship-oriented wording.",
-      "hiringUrl": "https://www.sam-young.com/sy/careers/",
-      "siteUrl": "https://www.sam-young.com/",
-      "sourceUrl": "https://www.sam-young.com/sy/careers/",
+      "status": "Early-career portal live",
+      "fit": "Strong for portfolio-based fresher applications into larger urban design and planning teams.",
+      "summary": "Large multidisciplinary practice with an official careers system and Pittsburgh presence.",
+      "applyUrl": "https://perkinseastman.wd5.myworkdayjobs.com/en-US/PerkinsEastmanCareers",
+      "siteUrl": "https://perkinseastman.com/",
+      "sourceUrl": "https://perkinseastman.wd5.myworkdayjobs.com/en-US/PerkinsEastmanCareers",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "perkins-will-pittsburgh",
+      "name": "Perkins&Will",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Public Realm"
+      ],
+      "status": "Graduate + intern route live",
+      "fit": "Useful for freshers because the global careers system regularly carries intern and graduate routes.",
+      "summary": "Well-known design practice with planning and urban design exposure plus a stable official careers portal.",
+      "applyUrl": "https://perkinswill.wd5.myworkdayjobs.com/en-US/perkinswillcareers",
+      "siteUrl": "https://perkinswill.com/",
+      "sourceUrl": "https://perkinswill.wd5.myworkdayjobs.com/en-US/perkinswillcareers",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "mksk-ohio",
+      "name": "MKSK",
+      "locationLabel": "Ohio offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Landscape"
+      ],
+      "status": "Official careers route live",
+      "fit": "A strong nearby-state option for freshers interested in civic, campus, and mixed-use urban design work.",
+      "summary": "Regional design studio with strong urban design and planning overlap across Ohio and adjacent markets.",
+      "applyUrl": "https://www.mkskstudios.com/careers/",
+      "siteUrl": "https://www.mkskstudios.com/",
+      "sourceUrl": "https://www.mkskstudios.com/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "wrt-philadelphia",
+      "name": "WRT",
+      "locationLabel": "Philadelphia, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Planning"
+      ],
+      "status": "Careers page active",
+      "fit": "Excellent portfolio benchmark for applicants targeting urban design and landscape-led public realm work.",
+      "summary": "Official careers page is live and the practice is directly relevant for urban design-oriented freshers.",
+      "applyUrl": "https://www.wrtdesign.com/careers",
+      "siteUrl": "https://www.wrtdesign.com/",
+      "sourceUrl": "https://www.wrtdesign.com/careers",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "design-collective-baltimore",
+      "name": "Design Collective",
+      "locationLabel": "Baltimore, Maryland",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Architecture"
+      ],
+      "status": "Careers page active",
+      "fit": "Worth targeting for fresher work because the studio blends architecture, planning, and mixed-use urban thinking.",
+      "summary": "Mid-Atlantic option with an official careers page and urban-scale project exposure.",
+      "applyUrl": "https://www.designcollective.com/careers/",
+      "siteUrl": "https://www.designcollective.com/",
+      "sourceUrl": "https://www.designcollective.com/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "toole-design-east",
+      "name": "Toole Design",
+      "locationLabel": "East Coast offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Transit",
+        "Public Realm"
+      ],
+      "status": "Careers page active",
+      "fit": "Good if your portfolio leans toward streets, mobility, walkability, and civic design systems.",
+      "summary": "Transport and public-realm focused practice with stable official hiring routes.",
+      "applyUrl": "https://toole-design.com/careers/",
+      "siteUrl": "https://toole-design.com/",
+      "sourceUrl": "https://toole-design.com/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "stantec-us",
+      "name": "Stantec",
+      "locationLabel": "US multiple offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Landscape"
+      ],
+      "status": "Graduate route live",
+      "fit": "Useful for a broad fresher search because the site consistently carries graduate and junior routes.",
+      "summary": "Large consultancy with recurring early-career and graduate hiring pages relevant to planning and urban design.",
+      "applyUrl": "https://stantec.jobs/",
+      "siteUrl": "https://www.stantec.com/",
+      "sourceUrl": "https://stantec.jobs/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "aecom-us",
+      "name": "AECOM",
+      "locationLabel": "US multiple offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
+      ],
+      "status": "Official careers route live",
+      "fit": "Practical fresher target if you are open to planning, urban strategy, or city-shaping consultancy roles.",
+      "summary": "Large employer with a stable careers platform and recurring city-planning related roles.",
+      "applyUrl": "https://aecom.jobs/",
+      "siteUrl": "https://aecom.com/",
+      "sourceUrl": "https://aecom.jobs/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "gensler-us",
+      "name": "Gensler",
+      "locationLabel": "US multiple offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Mixed Use"
+      ],
+      "status": "Careers page active",
+      "fit": "Useful for freshers targeting large-scale mixed-use, strategy, and urban design teams.",
+      "summary": "Global design practice with a stable careers portal and urban design visibility across many offices.",
+      "applyUrl": "https://www.gensler.com/careers",
+      "siteUrl": "https://www.gensler.com/",
+      "sourceUrl": "https://www.gensler.com/careers",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "sasaki-us",
+      "name": "Sasaki",
+      "locationLabel": "Boston, Massachusetts",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Masterplanning"
+      ],
+      "status": "Opportunities page active",
+      "fit": "A reach option, but highly relevant if your work leans masterplanning and interdisciplinary urban design.",
+      "summary": "Official opportunities page stays stable and is relevant for ambitious fresher outreach.",
+      "applyUrl": "https://www.sasaki.com/opportunities/",
+      "siteUrl": "https://www.sasaki.com/",
+      "sourceUrl": "https://www.sasaki.com/opportunities/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "ojb-multiple-locations",
+      "name": "OJB Landscape Architecture",
+      "locationLabel": "Philadelphia + multiple US offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "status": "Careers page active",
+      "fit": "Useful for freshers because OJB publishes designer and intern-oriented roles across multiple offices.",
+      "summary": "Official careers page is live and the firm has a Philadelphia presence with clear public-realm and planning relevance.",
+      "applyUrl": "https://www.ojb.com/careers/",
+      "siteUrl": "https://www.ojb.com/",
+      "sourceUrl": "https://www.ojb.com/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "swa-group-us",
+      "name": "SWA Group",
+      "locationLabel": "US studios",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Planning"
+      ],
+      "status": "Official careers route live",
+      "fit": "Relevant for freshers with landscape-led urban design work who are open to a national studio network.",
+      "summary": "SWA publishes openings on its official careers page and explicitly spans planning, landscape, and urban design.",
+      "applyUrl": "https://www.swagroup.com/about/careers/",
+      "siteUrl": "https://www.swagroup.com/",
+      "sourceUrl": "https://www.swagroup.com/about/careers/",
       "addedOn": "2026-03-15"
     }
   ],
-  "agencyDirectory": [
+  "europeUkOpenings": [
     {
-      "id": "publicis-luxe",
-      "name": "Publicis Luxe",
-      "city": "Paris",
+      "id": "arup-early-careers",
+      "name": "Arup",
+      "locationLabel": "UK + Europe",
+      "regionGroup": "Europe",
       "focus": [
-        "Branding",
-        "Creative",
-        "Luxury"
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
       ],
-      "summary": "Luxury-focused creative agency inside the Publicis group with brand, digital, and campaign work.",
-      "siteUrl": "https://www.publicisluxe.com/",
-      "sourceUrl": "https://www.publicisluxe.com/contact",
-      "hiringState": "Working-at route and contact available",
-      "addedOn": "2026-03-12"
-    },
-    {
-      "id": "heaven",
-      "name": "heaven",
-      "city": "Paris",
-      "focus": [
-        "Digital",
-        "Social",
-        "Creative"
-      ],
-      "summary": "Digital-native agency in Paris with social, activation, influencer, and content work.",
-      "siteUrl": "https://heaven.paris/",
-      "sourceUrl": "https://heaven.paris/contact/",
-      "hiringState": "General recruitment route available",
-      "addedOn": "2026-03-11"
-    },
-    {
-      "id": "wnp",
-      "name": "WNP",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Branding",
-        "PR"
-      ],
-      "summary": "French independent communications agency spanning strategy, creative, and public relations work.",
-      "siteUrl": "https://www.wnp.fr/",
-      "sourceUrl": "https://www.wnp.fr/",
-      "hiringState": "Explore direct outreach",
-      "addedOn": "2026-03-10"
-    },
-    {
-      "id": "ddb-paris",
-      "name": "DDB Paris",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Digital"
-      ],
-      "summary": "Large international network agency with Paris-based creative and brand communications work.",
-      "siteUrl": "https://www.ddb.fr/",
-      "sourceUrl": "https://www.ddb.fr/contact/",
-      "hiringState": "Check network careers",
-      "addedOn": "2026-03-10"
-    },
-    {
-      "id": "branderella",
-      "name": "Branderella",
-      "city": "Paris",
-      "focus": [
-        "Branding",
-        "Creative",
-        "Digital"
-      ],
-      "summary": "Paris-based English/French creative marketing agency with branding, digital campaigns, and design services.",
-      "siteUrl": "https://www.branderella.fr/",
-      "sourceUrl": "https://www.branderella.fr/careers",
-      "hiringState": "Open channel via careers contact",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "tbwa-paris",
-      "name": "TBWA\\Paris",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Digital"
-      ],
-      "summary": "Global-network creative agency with a Paris office and active recruitment channel for junior and internship outreach.",
-      "siteUrl": "https://tbwa-paris.com/",
-      "sourceUrl": "https://tbwa-paris.com/nous-rejoindre/",
-      "hiringState": "Recruitment page available",
-      "addedOn": "2026-03-14"
-    },
-    {
-      "id": "lola",
-      "name": "lola",
-      "city": "Luxembourg",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Social"
-      ],
-      "summary": "Well-known Luxembourg creative agency covering campaigns, strategy, and brand communications.",
-      "siteUrl": "https://www.lola.lu/",
-      "sourceUrl": "https://www.lola.lu/careers/",
-      "hiringState": "Watch careers page",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "knewledge",
-      "name": "Knewledge",
-      "city": "Luxembourg",
-      "focus": [
-        "Digital",
-        "PR",
-        "Social"
-      ],
-      "summary": "Integrated communication agency with strong digital, content, and media capabilities in Luxembourg.",
-      "siteUrl": "https://www.knewledge.com/",
-      "sourceUrl": "https://www.knewledge.com/lagence/rejoindre-lequipe/",
-      "hiringState": "Join-team page and contact available",
-      "addedOn": "2026-03-11"
-    },
-    {
-      "id": "binsfeld",
-      "name": "binsfeld",
-      "city": "Luxembourg",
-      "focus": [
-        "PR",
-        "Branding",
-        "Creative"
-      ],
-      "summary": "Long-standing Luxembourg communications agency with strategy, events, branding, and public relations work.",
-      "siteUrl": "https://www.binsfeld.lu/",
-      "sourceUrl": "https://binsfeld.lu/contact/",
-      "hiringState": "Explore direct outreach",
-      "addedOn": "2026-03-11"
-    },
-    {
-      "id": "ks",
-      "name": "KS Marketing",
-      "city": "Luxembourg",
-      "focus": [
-        "Digital",
-        "Social",
-        "Branding"
-      ],
-      "summary": "Marketing-focused Luxembourg firm suited to performance, digital visibility, and content-oriented work.",
-      "siteUrl": "https://www.ksmarketing.lu/",
-      "sourceUrl": "https://www.ksmarketing.lu/contact-us/",
-      "hiringState": "Direct outreach likely best",
-      "addedOn": "2026-03-09"
-    },
-    {
-      "id": "concept-factory",
-      "name": "Concept Factory",
-      "city": "Luxembourg",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Digital"
-      ],
-      "summary": "Luxembourg creative communication agency with an official jobs page suitable for internship and junior monitoring.",
-      "siteUrl": "https://www.conceptfactory.lu/",
-      "sourceUrl": "https://www.conceptfactory.lu/jobs/",
-      "hiringState": "Jobs page available",
-      "addedOn": "2026-03-14"
-    },
-    {
-      "id": "vanksen",
-      "name": "Vanksen",
-      "city": "Luxembourg",
-      "focus": [
-        "Digital",
-        "Social",
-        "Branding"
-      ],
-      "summary": "International digital communication agency founded in Luxembourg, with strong social, performance, and brand services.",
-      "siteUrl": "https://www.vanksen.com/en",
-      "sourceUrl": "https://www.vanksen.com/en/contact",
-      "hiringState": "Use official contact for opportunities",
-      "addedOn": "2026-03-13"
-    },
-    {
-      "id": "marcel-paris",
-      "name": "Marcel",
-      "city": "Paris",
-      "focus": [
-        "Creative",
-        "Branding",
-        "Social"
-      ],
-      "summary": "Paris creative agency within Publicis Groupe, active across brand campaigns and social-first creative work.",
-      "siteUrl": "https://marcelww.com/",
-      "sourceUrl": "https://marcelww.com/contact",
-      "hiringState": "Job opportunity contact published",
+      "status": "Early-careers route live",
+      "fit": "Very good for freshers because Arup clearly structures graduate and early-career entry routes.",
+      "summary": "Stable official early-careers page covering graduates and emerging talent across urbanism-related teams.",
+      "applyUrl": "https://careers.arup.com/early-careers",
+      "siteUrl": "https://www.arup.com/",
+      "sourceUrl": "https://careers.arup.com/early-careers",
       "addedOn": "2026-03-15"
     },
     {
-      "id": "we-are-social-paris",
-      "name": "We Are Social France",
-      "city": "Paris",
+      "id": "bdp-uk",
+      "name": "BDP",
+      "locationLabel": "UK offices",
+      "regionGroup": "UK",
       "focus": [
-        "Social",
-        "Creative",
-        "Digital"
+        "Urban Design",
+        "Planning",
+        "Architecture"
       ],
-      "summary": "Global social-first creative agency with a dedicated Paris office and direct official contact route.",
-      "siteUrl": "https://wearesocial.com/fr/",
-      "sourceUrl": "https://wearesocial.com/fr/nous-contacter/",
-      "hiringState": "Official Paris contact route available",
+      "status": "Careers page active",
+      "fit": "Strong for graduates because BDP is multidisciplinary and often suitable for planning and urbanism portfolios.",
+      "summary": "Official careers hub for a large UK design practice with planning and urban design relevance.",
+      "applyUrl": "https://www.bdp.com/en/careers/",
+      "siteUrl": "https://www.bdp.com/",
+      "sourceUrl": "https://www.bdp.com/en/careers/",
       "addedOn": "2026-03-15"
     },
     {
-      "id": "sam-young-lux",
-      "name": "SAM&YOUNG",
-      "city": "Luxembourg",
+      "id": "foster-partners-london",
+      "name": "Foster + Partners",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
       "focus": [
-        "Creative",
-        "Branding",
-        "Digital"
+        "Urban Design",
+        "Architecture",
+        "Masterplanning"
       ],
-      "summary": "Communication agency active in Luxembourg with official careers and contact channels.",
-      "siteUrl": "https://www.sam-young.com/",
-      "sourceUrl": "https://www.sam-young.com/sy/contact/",
-      "hiringState": "Careers and direct contact pages published",
+      "status": "Official careers route live",
+      "fit": "A high-bar option, but relevant for graduates with strong urban design and masterplanning material.",
+      "summary": "Official careers portal for a globally recognised design practice with urbanism exposure.",
+      "applyUrl": "https://www.fosterandpartnerscareers.com/",
+      "siteUrl": "https://www.fosterandpartners.com/",
+      "sourceUrl": "https://www.fosterandpartnerscareers.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "atkinsrealis-graduate",
+      "name": "AtkinsRealis",
+      "locationLabel": "UK graduate programme",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
+      ],
+      "status": "Graduate programme live",
+      "fit": "Useful for freshers looking for a formal graduate scheme rather than studio-by-studio outreach.",
+      "summary": "Official graduate programme page and large consultancy structure make it a dependable route.",
+      "applyUrl": "https://careers.atkinsrealis.com/graduate-development-programme",
+      "siteUrl": "https://www.atkinsrealis.com/",
+      "sourceUrl": "https://careers.atkinsrealis.com/graduate-development-programme",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "pegasus-group-uk",
+      "name": "Pegasus Group",
+      "locationLabel": "UK offices",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Landscape"
+      ],
+      "status": "Careers page active",
+      "fit": "Very relevant for freshers because the practice explicitly spans planning, urban design, and landscape.",
+      "summary": "Official careers route for a UK planning and urban design consultancy.",
+      "applyUrl": "https://careers.pegasusgroup.co.uk/",
+      "siteUrl": "https://www.pegasusgroup.co.uk/",
+      "sourceUrl": "https://careers.pegasusgroup.co.uk/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "stantec-bristol",
+      "name": "Stantec UK",
+      "locationLabel": "Bristol, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Landscape"
+      ],
+      "status": "Graduate urban designer route live",
+      "fit": "One of the clearest exact fresher matches because the route explicitly references graduate urban design.",
+      "summary": "Official job page for a graduate urban designer route in the UK operation.",
+      "applyUrl": "https://stantec.jobs/bristol-gbr/graduate-urban-designer-2026/B8FB5C8D5E0D4698A4E8A4F6DB9AFD1A/job/",
+      "siteUrl": "https://www.stantec.com/",
+      "sourceUrl": "https://stantec.jobs/bristol-gbr/graduate-urban-designer-2026/B8FB5C8D5E0D4698A4E8A4F6DB9AFD1A/job/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "aecom-emea",
+      "name": "AECOM EMEA",
+      "locationLabel": "Europe + UK",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
+      ],
+      "status": "Official careers route live",
+      "fit": "Practical for freshers who are open to planning, strategy, and city-shaping consultancy roles across Europe.",
+      "summary": "Official careers platform covers Europe and the UK and regularly routes applicants into graduate pathways.",
+      "applyUrl": "https://aecom.jobs/",
+      "siteUrl": "https://aecom.com/",
+      "sourceUrl": "https://aecom.jobs/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "ramboll-early-careers",
+      "name": "Ramboll",
+      "locationLabel": "Europe + UK",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Mobility"
+      ],
+      "status": "Early-careers route live",
+      "fit": "Useful if your work leans sustainable cities, mobility, and strategic urban systems.",
+      "summary": "Official early-careers route for a major European consultancy with city-shaping work.",
+      "applyUrl": "https://www.ramboll.com/careers/early-careers-and-graduates",
+      "siteUrl": "https://www.ramboll.com/",
+      "sourceUrl": "https://www.ramboll.com/careers/early-careers-and-graduates",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "buro-happold-early-careers",
+      "name": "Buro Happold",
+      "locationLabel": "UK + Europe",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Public Realm"
+      ],
+      "status": "Early-careers route live",
+      "fit": "Relevant for freshers who want multidisciplinary city and district-scale work inside a large practice.",
+      "summary": "Official careers page for early-career applications across a broad urban systems environment.",
+      "applyUrl": "https://burohappold.com/careers/",
+      "siteUrl": "https://burohappold.com/",
+      "sourceUrl": "https://burohappold.com/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "henning-larsen-graduate",
+      "name": "Henning Larsen",
+      "locationLabel": "Copenhagen, Denmark",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Architecture",
+        "Public Realm"
+      ],
+      "status": "Student + recent graduate route live",
+      "fit": "Strong studio option for freshers targeting design-led urbanism and public-space thinking.",
+      "summary": "Official listing for student or recent graduate talent entry through the studio's greenhouse board.",
+      "applyUrl": "https://job-boards.greenhouse.io/henninglarsen/jobs/4783775101",
+      "siteUrl": "https://henninglarsen.com/",
+      "sourceUrl": "https://job-boards.greenhouse.io/henninglarsen/jobs/4783775101",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "gpb-london",
+      "name": "Gustafson Porter + Bowman",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "status": "Open recruitment route published",
+      "fit": "Good for freshers because the studio publishes a direct recruitment address for CV and portfolio submissions.",
+      "summary": "Official join-us page invites applicants to send a CV and portfolio directly to recruitment.",
+      "applyUrl": "https://www.gp-b.com/join-us",
+      "siteUrl": "https://www.gp-b.com/",
+      "sourceUrl": "https://www.gp-b.com/join-us",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "arcadis-europe",
+      "name": "Arcadis",
+      "locationLabel": "UK + Europe",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
+      ],
+      "status": "Graduates and students route live",
+      "fit": "Useful for freshers who want a broad graduate intake and city-shaping consultancy exposure.",
+      "summary": "Official careers platform includes a graduates and students pathway across the wider business.",
+      "applyUrl": "https://careers.arcadis.com/",
+      "siteUrl": "https://www.arcadis.com/",
+      "sourceUrl": "https://careers.arcadis.com/",
+      "addedOn": "2026-03-15"
+    }
+  ],
+  "generalDirectory": [
+    {
+      "id": "evolveea-pittsburgh",
+      "name": "evolveEA",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Sustainability"
+      ],
+      "summary": "Pittsburgh-based design and planning practice worth monitoring even when no fresher role is obvious.",
+      "hiringState": "Watch the studio site",
+      "note": "Useful local target for speculative outreach with a strong city-making portfolio sample.",
+      "siteUrl": "https://evolveea.com/",
+      "sourceUrl": "https://evolveea.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "epd-pittsburgh",
+      "name": "Environmental Planning & Design",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Planning",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "Long-running Pittsburgh practice with planning and public-space relevance.",
+      "hiringState": "Directory only",
+      "note": "Worth keeping on the radar for outreach and future openings.",
+      "siteUrl": "https://www.epd-pgh.com/",
+      "sourceUrl": "https://www.epd-pgh.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "laquatra-bonci-pittsburgh",
+      "name": "LaQuatra Bonci Associates",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Landscape",
+        "Urban Design",
+        "Public Realm"
+      ],
+      "summary": "Regional practice with public-space and campus work useful for urban design-adjacent portfolios.",
+      "hiringState": "Directory only",
+      "note": "Good local studio to track even without a clear fresher listing.",
+      "siteUrl": "https://lba-cpa.com/",
+      "sourceUrl": "https://lba-cpa.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "pashek-mtr-pittsburgh",
+      "name": "Pashek + MTR",
+      "locationLabel": "Pittsburgh, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Planning",
+        "Urban Design",
+        "Landscape"
+      ],
+      "summary": "Pittsburgh-based planning and design firm with civic and public-space overlap.",
+      "hiringState": "Directory only",
+      "note": "Useful local directory name for future outreach rounds.",
+      "siteUrl": "https://pashekmtr.com/",
+      "sourceUrl": "https://pashekmtr.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "interface-studio-philadelphia",
+      "name": "Interface Studio",
+      "locationLabel": "Philadelphia, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Policy"
+      ],
+      "summary": "Urban design and planning studio with strong city and neighbourhood work.",
+      "hiringState": "Directory only",
+      "note": "Relevant east-coast practice even when the current jobs page is quiet.",
+      "siteUrl": "https://www.interfacestudio.com/",
+      "sourceUrl": "https://www.interfacestudio.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "olin-philadelphia",
+      "name": "OLIN",
+      "locationLabel": "Philadelphia, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Landscape",
+        "Urban Design",
+        "Public Realm"
+      ],
+      "summary": "High-profile public-realm and landscape practice with strong urban relevance.",
+      "hiringState": "Directory only",
+      "note": "Good benchmark and outreach target for public-space oriented portfolios.",
+      "siteUrl": "https://www.theolinstudio.com/",
+      "sourceUrl": "https://www.theolinstudio.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hdr-us",
+      "name": "HDR",
+      "locationLabel": "US multiple offices",
+      "regionGroup": "US",
+      "focus": [
+        "Planning",
+        "Urban Design",
+        "Infrastructure"
+      ],
+      "summary": "Large multidisciplinary consultancy with planning and city-shaping teams.",
+      "hiringState": "Watch the careers board",
+      "note": "Useful broad employer to keep in the longlist.",
+      "siteUrl": "https://www.hdrinc.com/",
+      "sourceUrl": "https://www.hdrinc.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "smithgroup-us",
+      "name": "SmithGroup",
+      "locationLabel": "US multiple offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Architecture"
+      ],
+      "summary": "Large practice with urban design and planning relevance across several offices.",
+      "hiringState": "Watch the careers board",
+      "note": "Broad target for freshers open to larger team environments.",
+      "siteUrl": "https://www.smithgroup.com/",
+      "sourceUrl": "https://www.smithgroup.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "west-8-netherlands",
+      "name": "West 8",
+      "locationLabel": "Rotterdam, Netherlands",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "Major European urbanism and landscape practice with public-realm relevance.",
+      "hiringState": "Directory only",
+      "note": "Strong European benchmark practice even when no current route is obvious.",
+      "siteUrl": "https://www.west8.com/",
+      "sourceUrl": "https://www.west8.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "kcapp-rotterdam",
+      "name": "KCAP",
+      "locationLabel": "Rotterdam, Netherlands",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Masterplanning",
+        "Landscape"
+      ],
+      "summary": "International urbanism and masterplanning studio worth tracking for future openings.",
+      "hiringState": "Directory only",
+      "note": "Relevant if the portfolio leans housing, district strategy, and masterplans.",
+      "siteUrl": "https://www.kcap.eu/",
+      "sourceUrl": "https://www.kcap.eu/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "mvrdv-rotterdam",
+      "name": "MVRDV",
+      "locationLabel": "Rotterdam, Netherlands",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Architecture",
+        "Masterplanning"
+      ],
+      "summary": "Design-led architecture and urbanism practice with globally visible city-scale work.",
+      "hiringState": "Directory only",
+      "note": "Good long-term reach target for stronger portfolios.",
+      "siteUrl": "https://www.mvrdv.com/",
+      "sourceUrl": "https://www.mvrdv.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "gehl-copenhagen",
+      "name": "Gehl",
+      "locationLabel": "Copenhagen, Denmark",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Public Realm",
+        "Mobility"
+      ],
+      "summary": "Global city-making consultancy with strong public-life and streetscape relevance.",
+      "hiringState": "Watch the studio site",
+      "note": "Excellent fit for portfolios grounded in people-first urbanism.",
+      "siteUrl": "https://gehlpeople.com/",
+      "sourceUrl": "https://gehlpeople.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "cobe-copenhagen",
+      "name": "COBE",
+      "locationLabel": "Copenhagen, Denmark",
+      "regionGroup": "Europe",
+      "focus": [
+        "Urban Design",
+        "Architecture",
+        "Public Realm"
+      ],
+      "summary": "Design-led European studio with urban-scale and waterfront public-space work.",
+      "hiringState": "Directory only",
+      "note": "Worth tracking for design-led urbanism opportunities.",
+      "siteUrl": "https://cobe.dk/",
+      "sourceUrl": "https://cobe.dk/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "lda-design-london",
+      "name": "LDA Design",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Planning"
+      ],
+      "summary": "Established UK practice across planning, landscape, and urban design.",
+      "hiringState": "Directory only",
+      "note": "Good longlist entry for public-realm and planning-heavy portfolios.",
+      "siteUrl": "https://www.ldadesign.co.uk/",
+      "sourceUrl": "https://www.ldadesign.co.uk/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hta-design-london",
+      "name": "HTA Design",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Housing",
+        "Masterplanning"
+      ],
+      "summary": "UK studio with strong housing, neighbourhood, and masterplanning relevance.",
+      "hiringState": "Directory only",
+      "note": "Useful if your portfolio has housing, block strategy, or regeneration work.",
+      "siteUrl": "https://www.hta.co.uk/",
+      "sourceUrl": "https://www.hta.co.uk/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "allies-morrison-london",
+      "name": "Allies and Morrison",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Masterplanning",
+        "Architecture"
+      ],
+      "summary": "Well-known UK practice with urban design and masterplanning strength.",
+      "hiringState": "Directory only",
+      "note": "Keep on the radar for stronger graduate applications.",
+      "siteUrl": "https://www.alliesandmorrison.com/",
+      "sourceUrl": "https://www.alliesandmorrison.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "sweco-europe",
+      "name": "Sweco",
+      "locationLabel": "Europe multiple offices",
+      "regionGroup": "Europe",
+      "focus": [
+        "Planning",
+        "Urban Design",
+        "Infrastructure"
+      ],
+      "summary": "Large European consultancy with city-shaping and planning-related work.",
+      "hiringState": "Watch the careers board",
+      "note": "Broad directory target for Europe-facing applications.",
+      "siteUrl": "https://www.swecogroup.com/",
+      "sourceUrl": "https://www.swecogroup.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "wsp-europe",
+      "name": "WSP",
+      "locationLabel": "UK + Europe",
+      "regionGroup": "Europe",
+      "focus": [
+        "Planning",
+        "Urban Design",
+        "Infrastructure"
+      ],
+      "summary": "Large consultancy relevant for urban, transport, and planning-adjacent applications.",
+      "hiringState": "Watch the careers board",
+      "note": "Useful longlist firm for a wider city-shaping search.",
+      "siteUrl": "https://www.wsp.com/",
+      "sourceUrl": "https://www.wsp.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "scape-new-york",
+      "name": "SCAPE",
+      "locationLabel": "New York, New York",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Climate Adaptation"
+      ],
+      "summary": "Award-winning landscape and urban design practice with strong public-realm and resilience work.",
+      "hiringState": "Directory only",
+      "note": "Strong benchmark studio for climate-forward urban design portfolios.",
+      "siteUrl": "https://www.scapestudio.com/",
+      "sourceUrl": "https://www.scapestudio.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "field-operations-nyc",
+      "name": "Field Operations",
+      "locationLabel": "New York + Philadelphia + London",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Masterplanning"
+      ],
+      "summary": "Major landscape urbanism practice working across New York, Philadelphia, London, and beyond.",
+      "hiringState": "Directory only",
+      "note": "Excellent reach target for stronger urbanism and waterfront portfolios.",
+      "siteUrl": "https://www.fieldoperations.net/studio",
+      "sourceUrl": "https://www.fieldoperations.net/studio",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "mvva-us",
+      "name": "Michael Van Valkenburgh Associates",
+      "locationLabel": "Brooklyn + Cambridge + Denver",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "Landscape architecture practice with major urban parks and waterfront work relevant to city-scale portfolios.",
+      "hiringState": "Directory only",
+      "note": "Good reach firm for public-realm and urban landscape oriented applications.",
+      "siteUrl": "https://www.mvvainc.com/",
+      "sourceUrl": "https://www.mvvainc.com/who-we-are/michael-van-valkenburgh-new",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "gpb-london-directory",
+      "name": "Gustafson Porter + Bowman",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "London landscape and public-realm practice with a direct recruitment contact on its official site.",
+      "hiringState": "Watch join-us page",
+      "note": "Relevant UK target for direct CV and portfolio outreach.",
+      "siteUrl": "https://www.gp-b.com/",
+      "sourceUrl": "https://www.gp-b.com/contact-us/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "ojb-philadelphia-directory",
+      "name": "OJB Philadelphia",
+      "locationLabel": "Philadelphia, Pennsylvania",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "Philadelphia office of a large landscape architecture firm with strong public-space and planning crossover.",
+      "hiringState": "Watch the careers page",
+      "note": "Good east-coast target even when the exact listing is in another office.",
+      "siteUrl": "https://www.ojb.com/",
+      "sourceUrl": "https://www.ojb.com/team/",
       "addedOn": "2026-03-15"
     }
   ],
   "motivationalQuotes": [
     {
+      "prompt": "Morning prompt",
+      "quote": "You do not need the whole map. You need the next strong application.",
+      "author": "Anne Lamott"
+    },
+    {
+      "prompt": "Midday prompt",
       "quote": "Success is the sum of small efforts, repeated day in and day out.",
       "author": "Robert Collier"
     },
     {
-      "quote": "It always seems impossible until it's done.",
+      "prompt": "Evening prompt",
+      "quote": "The future depends on what you do today.",
+      "author": "Mahatma Gandhi"
+    },
+    {
+      "prompt": "Late prompt",
+      "quote": "It always seems impossible until it is done.",
       "author": "Nelson Mandela"
-    },
-    {
-      "quote": "Do the best you can until you know better. Then when you know better, do better.",
-      "author": "Maya Angelou"
-    },
-    {
-      "quote": "Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying, I will try again tomorrow.",
-      "author": "Mary Anne Radmacher"
-    },
-    {
-      "quote": "Perseverance is not a long race; it is many short races one after another.",
-      "author": "Walter Elliot"
     }
   ]
 }

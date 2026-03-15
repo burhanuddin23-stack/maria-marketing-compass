@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lets look for an internship shall we, maria?</title>
+    <title>Lets look for urban design roles shall we?</title>
     <meta
       name="description"
-      content="A compact internship search website for marketing and creative agencies in Paris and Luxembourg."
+      content="A compact shortlist of fresher urban design openings around Pittsburgh, nearby US states, and Europe and the UK."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,25 +20,26 @@
     <div class="page-shell">
       <header class="hero surface">
         <div class="hero-copy">
-          <h1>Lets look for an internship shall we?</h1>
+          <h1>Lets look for urban design roles shall we?</h1>
           <p class="intro">
-            Compact shortlist. Daily refresh. Keep track of what you have viewed and applied to.
+            Pittsburgh first. Nearby states next. Europe and the UK in a separate lane. A denser
+            shortlist for fresher urban designers, planners, and public-realm applicants.
           </p>
         </div>
 
         <div class="hero-meta">
           <dl class="stats-grid">
             <div class="stat-card">
-              <dt>Open routes</dt>
-              <dd id="openRouteCount">0</dd>
+              <dt>US openings</dt>
+              <dd id="usOpeningsCount">0</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Europe + UK</dt>
+              <dd id="europeOpeningsCount">0</dd>
             </div>
             <div class="stat-card">
               <dt>Directory</dt>
               <dd id="directoryCount">0</dd>
-            </div>
-            <div class="stat-card">
-              <dt>Seen</dt>
-              <dd id="seenCount">0</dd>
             </div>
           </dl>
 
@@ -59,10 +60,10 @@
           </div>
         </div>
         <div class="manual-grid">
-          <p>1. Filter by city or focus.</p>
-          <p>2. Open the hiring or website links.</p>
-          <p>3. Tick firms as viewed or applied.</p>
-          <p>4. Check the Seen tab to review progress.</p>
+          <p>1. Start with Pittsburgh and nearby-state openings if location matters most.</p>
+          <p>2. Use the Europe + UK tab for graduate schemes and studio-wide early-career routes.</p>
+          <p>3. Tick firms as viewed or applied so they move into Seen for follow-up.</p>
+          <p>4. Use the directory when a firm is relevant but not clearly hiring today.</p>
         </div>
         <div class="sync-strip">
           <span id="syncState">Loading live data...</span>
@@ -74,7 +75,7 @@
         <div class="section-head">
           <div>
             <p class="section-kicker">Daily updates</p>
-            <h2>Recent changes.</h2>
+            <h2>Recent additions and route checks.</h2>
           </div>
         </div>
 
@@ -84,16 +85,12 @@
             <span>Browser notifications</span>
           </label>
           <label class="toggle-card">
-            <input id="watchParisToggle" type="checkbox" checked />
-            <span>Paris</span>
+            <input id="watchUsToggle" type="checkbox" checked />
+            <span>US openings</span>
           </label>
           <label class="toggle-card">
-            <input id="watchLuxembourgToggle" type="checkbox" checked />
-            <span>Luxembourg</span>
-          </label>
-          <label class="toggle-card">
-            <input id="watchHiringToggle" type="checkbox" checked />
-            <span>Opportunities</span>
+            <input id="watchEuropeToggle" type="checkbox" checked />
+            <span>Europe + UK</span>
           </label>
           <label class="toggle-card">
             <input id="watchDirectoryToggle" type="checkbox" checked />
@@ -108,40 +105,36 @@
 
       <main class="content-grid">
         <div class="tab-strip">
-          <button class="tab-button is-active" type="button" data-tab-target="opportunitiesTab">
-            Opportunities
+          <button class="tab-button is-active" type="button" data-tab-target="usTab">
+            Pittsburgh + nearby states
+          </button>
+          <button class="tab-button" type="button" data-tab-target="europeTab">
+            Europe + UK
           </button>
           <button class="tab-button" type="button" data-tab-target="directoryTab">Directory</button>
           <button class="tab-button" type="button" data-tab-target="seenTab">Seen</button>
         </div>
 
-        <section id="opportunitiesTab" class="surface section-panel tab-panel is-active">
+        <section id="usTab" class="surface section-panel tab-panel is-active">
           <div class="section-head">
             <div>
-              <p class="section-kicker">Opportunities</p>
-              <h2>Open applications.</h2>
+              <p class="section-kicker">US openings</p>
+              <h2>Fresher roles around Pittsburgh.</h2>
             </div>
-            <p class="section-meta">Verified routes first, direct contact second.</p>
+            <p class="section-meta">Prioritised around Pennsylvania, Ohio, Maryland, and nearby routes.</p>
           </div>
 
           <div class="filters">
             <label>
-              City
-              <select id="cityFilter">
+              Location
+              <select id="locationFilter">
                 <option value="all">All locations</option>
-                <option value="Paris">Paris</option>
-                <option value="Luxembourg">Luxembourg</option>
               </select>
             </label>
             <label>
               Focus
-              <select id="specialtyFilter">
+              <select id="disciplineFilter">
                 <option value="all">All disciplines</option>
-                <option value="Branding">Branding</option>
-                <option value="Creative">Creative</option>
-                <option value="Digital">Digital</option>
-                <option value="PR">PR</option>
-                <option value="Social">Social</option>
               </select>
             </label>
           </div>
@@ -150,15 +143,41 @@
             <table class="firm-table">
               <thead>
                 <tr>
-                  <th>Company</th>
-                  <th>City</th>
+                  <th>Firm</th>
+                  <th>Base</th>
                   <th>Focus</th>
-                  <th>Status</th>
-                  <th>Links</th>
+                  <th>Route</th>
+                  <th>Open</th>
                   <th>Track</th>
                 </tr>
               </thead>
-              <tbody id="hiringTableBody"></tbody>
+              <tbody id="usOpeningsTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="europeTab" class="surface section-panel tab-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Europe + UK openings</p>
+              <h2>Graduate and early-career routes.</h2>
+            </div>
+            <p class="section-meta">Large consultancies and design studios with clearer official entry routes.</p>
+          </div>
+
+          <div class="table-shell">
+            <table class="firm-table">
+              <thead>
+                <tr>
+                  <th>Firm</th>
+                  <th>Base</th>
+                  <th>Focus</th>
+                  <th>Route</th>
+                  <th>Open</th>
+                  <th>Track</th>
+                </tr>
+              </thead>
+              <tbody id="europeOpeningsTableBody"></tbody>
             </table>
           </div>
         </section>
@@ -167,20 +186,20 @@
           <div class="section-head">
             <div>
               <p class="section-kicker">Directory</p>
-              <h2>More firms to explore.</h2>
+              <h2>General urban design target list.</h2>
             </div>
-            <p class="section-meta">A longer target list beyond the open routes.</p>
+            <p class="section-meta">Relevant firms even when there is no confirmed fresher opening right now.</p>
           </div>
 
           <div class="table-shell">
             <table class="firm-table">
               <thead>
                 <tr>
-                  <th>Company</th>
-                  <th>City</th>
+                  <th>Firm</th>
+                  <th>Base</th>
                   <th>Focus</th>
-                  <th>Hiring note</th>
-                  <th>Links</th>
+                  <th>Note</th>
+                  <th>Open</th>
                   <th>Track</th>
                 </tr>
               </thead>
@@ -195,18 +214,18 @@
               <p class="section-kicker">Seen</p>
               <h2>Viewed and applied.</h2>
             </div>
-            <p class="section-meta">Your tracked firms appear here automatically.</p>
+            <p class="section-meta">The shortlist you have already touched moves here automatically.</p>
           </div>
 
           <div class="table-shell">
             <table class="firm-table">
               <thead>
                 <tr>
-                  <th>Company</th>
+                  <th>Firm</th>
                   <th>Type</th>
-                  <th>City</th>
+                  <th>Base</th>
                   <th>Status</th>
-                  <th>Links</th>
+                  <th>Open</th>
                 </tr>
               </thead>
               <tbody id="seenTableBody"></tbody>
