@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-15T19:05:00+01:00",
+  "updatedAt": "2026-03-15T19:45:00+01:00",
   "usOpenings": [
     {
       "id": "land-collective-pittsburgh",
@@ -252,6 +252,42 @@
       "siteUrl": "https://www.swagroup.com/",
       "sourceUrl": "https://www.swagroup.com/about/careers/",
       "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hok-us",
+      "name": "HOK",
+      "locationLabel": "US multiple studios",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Public Realm"
+      ],
+      "status": "Student internship route live",
+      "fit": "Useful for freshers because HOK explicitly describes paid student internships across planning and related disciplines.",
+      "summary": "Official careers page highlights student internships and broad planning-oriented pathways across its studio network.",
+      "applyUrl": "https://www.hok.com/people/careers/",
+      "siteUrl": "https://www.hok.com/",
+      "sourceUrl": "https://www.hok.com/people/careers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "jacobs-early-careers",
+      "name": "Jacobs",
+      "locationLabel": "US + global offices",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Infrastructure"
+      ],
+      "status": "Careers route live",
+      "fit": "Good broad employer for freshers who can position themselves across planning, transport, and city-shaping teams.",
+      "summary": "Jacobs routes applicants through its official careers platform and publicly references graduate urban design progression in the business.",
+      "applyUrl": "https://careers.jacobs.com/",
+      "siteUrl": "https://www.jacobs.com/",
+      "sourceUrl": "https://www.jacobs.com/contact",
+      "addedOn": "2026-03-15"
     }
   ],
   "europeUkOpenings": [
@@ -469,6 +505,24 @@
       "applyUrl": "https://careers.arcadis.com/",
       "siteUrl": "https://www.arcadis.com/",
       "sourceUrl": "https://careers.arcadis.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hok-london",
+      "name": "HOK London",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Architecture"
+      ],
+      "status": "Student internship route live",
+      "fit": "Relevant for freshers because HOK publicly notes student internships and cross-office design exposure.",
+      "summary": "Official careers page covers paid student internships and wider early-career pathways across the firm, including London.",
+      "applyUrl": "https://www.hok.com/people/careers/",
+      "siteUrl": "https://www.hok.com/",
+      "sourceUrl": "https://www.hok.com/people/careers/",
       "addedOn": "2026-03-15"
     }
   ],
@@ -862,6 +916,193 @@
       "note": "Good east-coast target even when the exact listing is in another office.",
       "siteUrl": "https://www.ojb.com/",
       "sourceUrl": "https://www.ojb.com/team/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "jacobs-directory",
+      "name": "Jacobs",
+      "locationLabel": "UK + Europe + US",
+      "regionGroup": "Global",
+      "focus": [
+        "Planning",
+        "Urban Design",
+        "Infrastructure"
+      ],
+      "summary": "Major consultancy with planning, transport, and urban strategy exposure across many offices.",
+      "hiringState": "Watch the careers board",
+      "note": "Broad employer worth tracking even when exact urban design titles are not visible.",
+      "siteUrl": "https://www.jacobs.com/",
+      "sourceUrl": "https://www.jacobs.com/contact",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hok-directory",
+      "name": "HOK",
+      "locationLabel": "US + UK studios",
+      "regionGroup": "Global",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Architecture"
+      ],
+      "summary": "Global design firm with dedicated planning and urban design leadership across multiple regions.",
+      "hiringState": "Watch the careers board",
+      "note": "Good longlist firm for larger mixed-use and district-scale urbanism work.",
+      "siteUrl": "https://www.hok.com/",
+      "sourceUrl": "https://www.hok.com/contact/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "turley-uk",
+      "name": "Turley",
+      "locationLabel": "UK offices",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Planning",
+        "Landscape"
+      ],
+      "summary": "UK planning and design consultancy with a visible urban design discipline.",
+      "hiringState": "Watch the careers board",
+      "note": "Good UK longlist entry for planning-heavy urban design roles.",
+      "siteUrl": "https://www.turley.co.uk/",
+      "sourceUrl": "https://www.turley.co.uk/person/georgia-hartley",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "savills-urban-design",
+      "name": "Savills Urban Design Studio",
+      "locationLabel": "London + Oxford + Southampton",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Masterplanning",
+        "Landscape"
+      ],
+      "summary": "UK property and planning business with a dedicated urban design studio and graduate urban designers on staff.",
+      "hiringState": "Watch the urban design team",
+      "note": "Useful for a planning-led urban design search in the UK.",
+      "siteUrl": "https://www.savills.co.uk/services/planning/urban-design.aspx",
+      "sourceUrl": "https://www.savills.co.uk/people/savills-margaret-street/aisha-khan.aspx",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "prior-partners-london",
+      "name": "Prior + Partners",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Masterplanning",
+        "Regeneration"
+      ],
+      "summary": "London practice focused on regeneration and masterplanning with explicit urban designer hiring history.",
+      "hiringState": "Watch the vacancies page",
+      "note": "Relevant for stronger graduate portfolios focused on regeneration and mixed use.",
+      "siteUrl": "https://www.priorandpartners.com/",
+      "sourceUrl": "https://www.priorandpartners.com/vacancy/masterplanners-urban-designers/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "place-services-uk",
+      "name": "Place Services",
+      "locationLabel": "Chelmsford, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Planning"
+      ],
+      "summary": "Public-sector consultancy team with visible urban design and landscape roles on the official site.",
+      "hiringState": "Watch the careers page",
+      "note": "Particularly relevant for candidates interested in public-sector design and code-making work.",
+      "siteUrl": "https://www.placeservices.co.uk/",
+      "sourceUrl": "https://www.placeservices.co.uk/who-we-are/careers/assistant-urban-design-consultant-old/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "alexandra-steed-urban",
+      "name": "Alexandra Steed URBAN",
+      "locationLabel": "London, UK",
+      "regionGroup": "UK",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Masterplanning"
+      ],
+      "summary": "London studio with strong landscape and urbanism crossover.",
+      "hiringState": "Watch the studio site",
+      "note": "Useful longlist entry for design-led public realm and masterplanning work.",
+      "siteUrl": "https://alexandrasteedurban.com/",
+      "sourceUrl": "https://alexandrasteedurban.com/latest-news/urban-is-recruiting/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "james-corner-field-operations",
+      "name": "James Corner Field Operations",
+      "locationLabel": "New York + Philadelphia + London",
+      "regionGroup": "Global",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Masterplanning"
+      ],
+      "summary": "Major landscape urbanism studio with offices tied to US and UK city-making work.",
+      "hiringState": "Directory only",
+      "note": "Strong benchmark firm for public-space and waterfront-led portfolios.",
+      "siteUrl": "https://www.fieldoperations.net/",
+      "sourceUrl": "https://www.fieldoperations.net/studio",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "stoss-boston",
+      "name": "Stoss",
+      "locationLabel": "Boston + Los Angeles",
+      "regionGroup": "US",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Resilience"
+      ],
+      "summary": "Landscape urbanism practice with strong public realm, infrastructure, and resilience work.",
+      "hiringState": "Directory only",
+      "note": "Good design-led reach target for climate and public-space portfolios.",
+      "siteUrl": "https://www.stoss.net/",
+      "sourceUrl": "https://www.stoss.net/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "hargreaves-jones",
+      "name": "Hargreaves Jones",
+      "locationLabel": "New York + San Francisco + Cambridge + London",
+      "regionGroup": "Global",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "Practice focused on large public landscapes and urban public-space systems.",
+      "hiringState": "Directory only",
+      "note": "Useful longlist studio for landscape-led urban design.",
+      "siteUrl": "https://www.hargreavesjones.com/",
+      "sourceUrl": "https://www.hargreavesjones.com/",
+      "addedOn": "2026-03-15"
+    },
+    {
+      "id": "aspect-studios-london",
+      "name": "ASPECT Studios",
+      "locationLabel": "London + global studios",
+      "regionGroup": "Global",
+      "focus": [
+        "Urban Design",
+        "Landscape",
+        "Public Realm"
+      ],
+      "summary": "International practice working across urban design, landscape, and public-realm projects.",
+      "hiringState": "Directory only",
+      "note": "Good international target for design-led civic and city work.",
+      "siteUrl": "https://www.aspect-studios.com/",
+      "sourceUrl": "https://www.aspect-studios.com/",
       "addedOn": "2026-03-15"
     }
   ],
