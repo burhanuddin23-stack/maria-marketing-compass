@@ -133,11 +133,13 @@ function createOpeningRow(entry) {
         <div class="sub-copy">${entry.fit}</div>
       </td>
       <td data-label="Base">${entry.locationLabel}</td>
+      <td data-label="Region">${entry.regionGroup}</td>
       <td data-label="Focus">${renderPills(entry.focus)}</td>
       <td data-label="Route">
         <div class="company-name">${entry.status}</div>
         <div class="sub-copy">${entry.summary}</div>
       </td>
+      <td data-label="Added">${entry.addedOn}</td>
       <td data-label="Open">${buildOpenLink(entry)}</td>
       <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
@@ -152,11 +154,13 @@ function createDirectoryRow(entry) {
         <div class="sub-copy">${entry.summary}</div>
       </td>
       <td data-label="Base">${entry.locationLabel}</td>
+      <td data-label="Region">${entry.regionGroup}</td>
       <td data-label="Focus">${renderPills(entry.focus)}</td>
       <td data-label="Note">
         <div class="company-name">${entry.hiringState}</div>
         <div class="sub-copy">${entry.note}</div>
       </td>
+      <td data-label="Added">${entry.addedOn}</td>
       <td data-label="Open">${buildOpenLink(entry)}</td>
       <td data-label="Track">${renderTrackingControls(entry.id)}</td>
     </tr>
@@ -341,21 +345,21 @@ function renderAll() {
     state.usOpenings,
     createOpeningRow,
     "No US openings match this filter yet.",
-    6,
+    8,
   );
   renderTable(
     europeOpeningsTableBody,
     state.europeUkOpenings,
     createOpeningRow,
     "No Europe or UK openings match this filter yet.",
-    6,
+    8,
   );
   renderTable(
     directoryTableBody,
     state.generalDirectory,
     createDirectoryRow,
     "No directory firms match this filter yet.",
-    6,
+    8,
   );
   renderSeen();
   renderUpdates();
