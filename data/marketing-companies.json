@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-14T12:55:41+01:00",
+  "updatedAt": "2026-03-15T08:18:14+01:00",
   "hiringOpportunities": [
     {
       "id": "betc-paris",
@@ -81,9 +81,9 @@
       "status": "Global careers route",
       "internshipFit": "Useful for digital marketing, CRM, and social applications.",
       "summary": "VML France is part of a larger network, but its careers route is active and worth checking for Paris-based junior and internship-friendly listings.",
-      "hiringUrl": "https://www.vml.com/careers",
+      "hiringUrl": "https://www.vml.com/france/careers",
       "siteUrl": "https://www.vml.com/france",
-      "sourceUrl": "https://www.vml.com/careers",
+      "sourceUrl": "https://www.vml.com/france/careers",
       "addedOn": "2026-03-13"
     },
     {
@@ -98,9 +98,9 @@
       "status": "Recruitment contact open",
       "internshipFit": "Best for direct outreach with a tailored CV and portfolio.",
       "summary": "Havas Paris keeps a recruitment contact on its official site, which is useful when no exact internship post is visible but the agency is still approachable.",
-      "hiringUrl": "https://www.havasparis.com/",
+      "hiringUrl": "https://www.havasparis.com/contact/",
       "siteUrl": "https://www.havasparis.com/",
-      "sourceUrl": "https://www.havasparis.com/",
+      "sourceUrl": "https://www.havasparis.com/contact/",
       "addedOn": "2026-03-13"
     },
     {
@@ -132,9 +132,9 @@
       "status": "Open applications via contact",
       "internshipFit": "Good for proactive internship outreach by email.",
       "summary": "Point A welcomes direct applications through its official contact channel and outlines careers interest on its site, making it a practical outreach target in Luxembourg.",
-      "hiringUrl": "https://pointamarketing.com/contact-us",
+      "hiringUrl": "https://pointamarketing.com/contact-us/",
       "siteUrl": "https://pointamarketing.com/",
-      "sourceUrl": "https://pointamarketing.com/contact-us",
+      "sourceUrl": "https://pointamarketing.com/contact-us/",
       "addedOn": "2026-03-13"
     },
     {
@@ -170,6 +170,23 @@
       "siteUrl": "https://www.lola.lu/",
       "sourceUrl": "https://www.lola.lu/careers/",
       "addedOn": "2026-03-13"
+    },
+    {
+      "id": "marcel-paris",
+      "name": "Marcel",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "status": "Jobs contact published",
+      "internshipFit": "Good fit for proactive internship and junior outreach via jobs contact.",
+      "summary": "Marcel official contact page includes a job opportunity route, making it a practical Paris agency for internship outreach.",
+      "hiringUrl": "https://marcelww.com/contact",
+      "siteUrl": "https://marcelww.com/",
+      "sourceUrl": "https://marcelww.com/contact",
+      "addedOn": "2026-03-15"
     }
   ],
   "agencyDirectory": [
@@ -184,8 +201,8 @@
       ],
       "summary": "Luxury-focused creative agency inside the Publicis group with brand, digital, and campaign work.",
       "siteUrl": "https://www.publicisluxe.com/",
-      "sourceUrl": "https://www.publicisluxe.com/",
-      "hiringState": "Check Publicis careers",
+      "sourceUrl": "https://www.publicisluxe.com/contact",
+      "hiringState": "Working-at route and contact available",
       "addedOn": "2026-03-12"
     },
     {
@@ -304,8 +321,8 @@
       ],
       "summary": "Integrated communication agency with strong digital, content, and media capabilities in Luxembourg.",
       "siteUrl": "https://www.knewledge.com/",
-      "sourceUrl": "https://www.knewledge.com/",
-      "hiringState": "Monitor agency updates",
+      "sourceUrl": "https://www.knewledge.com/lagence/rejoindre-lequipe/",
+      "hiringState": "Join-team page and contact available",
       "addedOn": "2026-03-11"
     },
     {
@@ -379,9 +396,24 @@
       ],
       "summary": "International digital communication agency founded in Luxembourg, with strong social, performance, and brand services.",
       "siteUrl": "https://www.vanksen.com/en",
-      "sourceUrl": "https://www.vanksen.com/en/about-us/international-presence/luxembourg",
+      "sourceUrl": "https://www.vanksen.com/en/contact",
       "hiringState": "Use official contact for opportunities",
       "addedOn": "2026-03-13"
+    },
+    {
+      "id": "marcel-paris",
+      "name": "Marcel",
+      "city": "Paris",
+      "focus": [
+        "Creative",
+        "Branding",
+        "Social"
+      ],
+      "summary": "Paris creative agency within Publicis Groupe, active across brand campaigns and social-first creative work.",
+      "siteUrl": "https://marcelww.com/",
+      "sourceUrl": "https://marcelww.com/contact",
+      "hiringState": "Job opportunity contact published",
+      "addedOn": "2026-03-15"
     }
   ],
   "motivationalQuotes": [
